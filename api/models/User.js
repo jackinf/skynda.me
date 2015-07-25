@@ -40,7 +40,21 @@ module.exports = {
     teams: {
       collection: 'teams',
       via: 'members'
+    },
+    masteringGuild: {
+      model: 'guild'
+    },
+    masteringClubs: {
+      collection: 'club',
+      via: 'master'
+    },
+    moderatingGuild: {
+      model: 'guild'
+    },
+    moderatingWorld: {
+      model: 'world'
     }
+
   }
 };
 

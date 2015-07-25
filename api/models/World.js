@@ -16,10 +16,11 @@ module.exports = {
     },
     board :{
       collection: 'board',
-      via: 'ofGuild'
+      via: 'ofWorld'
     },
     moderators :{
-      collection: 'user'
+      collection: 'user',
+      via: 'moderatingWorld'
     }
   }
 };

@@ -22,7 +22,8 @@ module.exports = {
       via: 'ofGuild'
     },
     moderators :{
-      collection: 'user'
+      collection: 'user',
+      via: 'moderatingGuild'
     },
     members: {
       collection: 'user',

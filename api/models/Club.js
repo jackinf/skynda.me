@@ -12,7 +12,8 @@ module.exports = {
       type: 'string'
     },
     master:{
-      collection: 'user'
+      collection: 'user',
+      via: 'masteringClubs'
     },
     topics:{
       type: 'array'
