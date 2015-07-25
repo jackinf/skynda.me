@@ -26,13 +26,44 @@ var jsFilesToInject = [
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
 
-  // Dependencies like jQuery, or Angular are brought in here
-  'js/dependencies/**/*.js',
+  //prefixfree.min.js
+  '/bower_components/prefixfree/prefixfree.min.js',
 
-  // All of the rest of your client-side js files
+  //underscore.min.js
+  '/bower_components/underscore/underscore-min.js',
+
+  //angularjs
+  '/bower_components/angular/angular.min.js',
+  '/bower_components/angular-ui-router/release/angular-ui-router.min.js',
+  '/bower_components/angular-animate/angular-animate.min.js',
+  '/bower_components/angular-aria/angular-aria.min.js',
+  '/bower_components/angular-material/angular-material.min.js',
+  '/bower_components/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js',
+  '/bower_components/angular-sanitize/angular-sanitize.min.js',
+  '/bower_components/angular-scroll-glue/src/scrollglue.js',
+
+   //angular sails
+  '/bower_components/angular-sails/dist/angular-sails.min.js',
+
+  //angularjs services
+  '/js/services/crud.js',
+
+  //angularjs directives
+  '/js/directives/angular-share.js',
+  '/js/directives/angular-diff.js',
+
+  //angularjs main application
+  '/js/app/*.js',
+
+  //angularjs services
+  '/js/services/*.js',
+
+  //angularjs controllers
+  '/js/controllers/*.js'
+
   // will be injected here in no particular order.
-  'js/**/*.min.js',
-  'bower_components/**/*.min.js'
+  //'js/**/*.min.js',
+  //'bower_components/**/*.min.js'
 ];
 
 
