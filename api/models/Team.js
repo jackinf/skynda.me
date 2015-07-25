@@ -11,7 +11,7 @@ module.exports = {
       type: 'string'
     },
     projects: {
-      collection: 'projects',
+      collection: 'project',
       via: 'teams'
     },
     pretending:{
