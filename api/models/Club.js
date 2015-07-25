@@ -11,12 +11,11 @@ module.exports = {
     name:{
       type: 'string'
     },
-    master:{
-      collection: 'user',
-      via: 'masteringClubs'
-    },
     topics:{
       type: 'array'
+    },
+    master:{
+      model: 'user'
     },
     members:{
       collection: 'user',

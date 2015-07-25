@@ -15,8 +15,7 @@ module.exports = {
       model: 'user'
     },
     board :{
-      collection: 'board',
-      via: 'ofWorld'
+      model: 'board'
     },
     moderators :{
       collection: 'user',

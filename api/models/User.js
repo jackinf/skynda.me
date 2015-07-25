@@ -10,7 +10,7 @@ module.exports = {
   attributes: {
     role : {
       type: 'string',
-      enum: ['person', 'bussiness']
+      enum: ['person', 'business']
     },
     firstName: {
       type: 'string'
@@ -30,23 +30,23 @@ module.exports = {
     rank: {
       type: 'integer'
     },
-    guild: {
-      model:'guild'
+    teams: {
+      collection: 'team',
+      via: 'members'
     },
     clubs: {
       collection: 'club',
       via: 'members'
     },
-    teams: {
-      collection: 'teams',
-      via: 'members'
-    },
-    masteringGuild: {
-      model: 'guild'
-    },
     masteringClubs: {
       collection: 'club',
       via: 'master'
+    },
+    guild: {
+      model:'guild'
+    },
+    masteringGuild: {
+      model: 'guild'
     },
     moderatingGuild: {
       model: 'guild'
@@ -54,7 +54,6 @@ module.exports = {
     moderatingWorld: {
       model: 'world'
     }
-
   }
 };
 

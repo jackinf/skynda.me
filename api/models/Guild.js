@@ -14,12 +14,12 @@ module.exports = {
     rules:{
       type: 'string'
     },
-    master:{
-      model: 'user'
-    },
     board :{
       collection: 'board',
       via: 'ofGuild'
+    },
+    master:{
+      model: 'user'
     },
     moderators :{
       collection: 'user',

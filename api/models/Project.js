@@ -31,9 +31,9 @@ module.exports = {
     board: {
       model: 'board'
     },
-    pretender:{
+    pretenders:{
       collection: 'team',
-      via: 'projects'
+      via: 'pretending'
     },
     teams: {
       collection: 'team',

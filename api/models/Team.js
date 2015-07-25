@@ -15,7 +15,7 @@ module.exports = {
       via: 'teams'
     },
     pretending:{
-      collection: 'user',
+      collection: 'project',
       via: 'pretenders'
     },
     members: {
