@@ -15,6 +15,9 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
+  '/bower_components/bootstrap/dist/css/bootstrap.min.css',
+  '/bower_components/font-awesome/css/font-awesome.min.css',
+  '/bower_components/angular-material/angular-material.min.css',
   'styles/**/*.css'
 ];
 
@@ -59,10 +62,10 @@ var jsFilesToInject = [
   '/js/services/*.js',
 
   //angularjs controllers
-  '/js/controllers/*.js'
+  '/js/controllers/*.js',
 
   // will be injected here in no particular order.
-  //'js/**/*.min.js',
+  'js/**/*.min.js',
   //'bower_components/**/*.min.js'
 ];
 
