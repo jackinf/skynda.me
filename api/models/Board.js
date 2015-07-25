@@ -14,7 +14,7 @@ module.exports = {
     },
     projects: {
       collection: 'project',
-      via: 'boards'
+      via: 'board'
     }
 
   }

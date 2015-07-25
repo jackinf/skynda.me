@@ -29,8 +29,7 @@ module.exports = {
       type: 'string'
     },
     board: {
-      collection: 'board',
-      via: 'projects'
+      model: 'board'
     },
     pretender:{
       collection: 'team',
