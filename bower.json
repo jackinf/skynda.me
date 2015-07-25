@@ -1,0 +1,35 @@
+{
+  "name": "legislator",
+  "version": "0.0.0",
+  "homepage": "https://github.com/ingedwardyrc/legislator",
+  "authors": [
+    "Eduar Rodriguez <ing.edwardyrc@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "socket.io": ">=1.0.6",
+    "prefixfree": "*",
+    "underscore": ">=1.6.0",
+    "angular": ">=1.2.21",
+    "angular-animate": ">=1.2.21",
+    "angular-sanitize": ">=1.2.21",
+    "angular-route": ">=1.4.0",
+    "angular-aria": "~1.4.0",
+    "angular-material": "~0.9.8",
+    "font-awesome": ">=4.3.0",
+    "bootstrap": ">=3.2.0",
+    "angular-scroll-glue": "~2.0.6",
+    "angular-ui-router": "~0.2.15",
+    "bower": "*",
+    "install": "~1.0.4",
+    "angular-sails": "~1.1.4"
+  }
+}
