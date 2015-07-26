@@ -1,14 +1,30 @@
 /**
-* User.js
-*
-* @description :: TODO: You might write a short summary of how this model works and what it represents here.
-* @docs        :: http://sailsjs.org/#!documentation/models
-*/
+ * User.js
+ *
+ * @description :: TODO: You might write a short summary of how this model works and what it represents here.
+ * @docs        :: http://sailsjs.org/#!documentation/models
+ */
 
 module.exports = {
+  schema: true,
 
   attributes: {
-    role : {
+    username: {
+      type: 'string',
+      unique: true
+    },
+    email: {
+      type: 'email',
+      unique: true
+    },
+    photoUrl: {
+      type: 'string'
+    },
+    passports: {
+      collection: 'Passport',
+      via: 'user'
+    },
+    role: {
       type: 'string',
       enum: ['person', 'business']
     },
@@ -17,12 +33,6 @@ module.exports = {
     },
     lastName: {
       type: 'string'
-    },
-    userName: {
-      type: 'string'
-    },
-    email: {
-      type: 'email'
     },
     identification: {
       type: 'string'
@@ -43,7 +53,7 @@ module.exports = {
       via: 'master'
     },
     guild: {
-      model:'guild'
+      model: 'guild'
     },
     masteringGuild: {
       model: 'guild'
@@ -55,5 +65,6 @@ module.exports = {
       model: 'world'
     }
   }
+
 };
 
