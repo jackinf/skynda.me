@@ -28,7 +28,7 @@ module.exports = {
       type: 'string',
       enum: ['person', 'business']
     },
-    firstName: {
+    name: {
       type: 'string'
     },
     lastName: {

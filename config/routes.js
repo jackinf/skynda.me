@@ -34,7 +34,6 @@ module.exports.routes = {
 
   'get /api/language': 'TranslationController.get',
 
-  'get /login': 'AuthController.login',
   'get /logout': 'AuthController.logout',
   'get /register': 'AuthController.register',
 
