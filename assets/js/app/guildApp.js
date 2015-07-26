@@ -5,8 +5,7 @@ legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
   $mdThemingProvider.theme('default')
     .primaryPalette('lime')
     .accentPalette('grey')
-    .warnPalette('blue-grey')
-    .dark();
+    .warnPalette('blue-grey');
 
   $locationProvider.html5Mode({
     enabled: true,

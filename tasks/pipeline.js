@@ -67,7 +67,7 @@ var jsFilesToInject = [
   '/js/controllers/*.js',
 
   // will be injected here in no particular order.
-  'js/**/*.min.js',
+  'js/**/*.js'
   //'bower_components/**/*.min.js'
 ];
 
