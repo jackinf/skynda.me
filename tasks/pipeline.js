@@ -45,6 +45,7 @@ var jsFilesToInject = [
   '/bower_components/angular-sanitize/angular-sanitize.min.js',
   '/bower_components/angular-scroll-glue/src/scrollglue.js',
   '/bower_components/angular-translate/angular-translate.min.js',
+  '/bower_components/angular-translate-loader-url/angular-translate-loader-url.min.js',
 
    //angular sails
   '/bower_components/angular-sails/dist/angular-sails.min.js',

@@ -1,6 +1,6 @@
 var legislatorApp = angular.module('guild', ['ngMaterial', 'ui.router' , 'ngSails', 'luegg.directives', 'pascalprecht.translate']);
 
-legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider) {
+legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, $translateProvider) {
 
   $mdThemingProvider.theme('default')
     .primaryPalette('lime')
@@ -13,7 +13,6 @@ legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
     requireBase: false
   });
 
-
   $stateProvider
     .state('login', {
       url: '/login',
@@ -21,5 +20,8 @@ legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
     });
 
   $urlRouterProvider.otherwise('/');
+
+  $translateProvider.useUrlLoader("/api/language");
+  $translateProvider.preferredLanguage("es");
 
 });

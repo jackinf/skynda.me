@@ -36,7 +36,8 @@ module.exports.routes = {
     view: 'index',
     skipAssets: true,
     skipRegex: /^\/api\/.*$/
-  }
+  },
+  'get /api/language': 'TranslationController.get'
 
   /***************************************************************************
   *                                                                          *
