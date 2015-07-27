@@ -18,7 +18,7 @@
 module.exports = {
   get: function (req, res, next) {
     var language = req.param('lang');
-    console.log(JSON.stringify(res.locals.getCatalog(language)));
+    console.log("getting lang: ", language);
     res.json(
       res.locals.getCatalog(language)
     );

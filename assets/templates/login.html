@@ -1,15 +1,15 @@
 <div ng-controller="authController" layout="row" layout-align-gt-sm="center center" layout-align-sm="center start" flex>
 
-  <md-whiteframe class="md-whiteframe-z5 indexBox" layout="column" layout-padding layout-align="center center"
+  <md-whiteframe class="md-whiteframe-z5" layout="column" layout-padding layout-align="center center"
                  layout-margin>
-    <md-content layout-align="center center" layout-fill>
+    <md-content layout-align="center center" layout-fill style="min-width: 400px">
       <md-tabs md-dynamic-height md-stretch-tabs="always" md-border-bottom layout-fill>
         <md-tab label="{{ 'LogIn'| translate }}">
           <md-content class="md-padding">
             <form action="/auth/local" method="POST" layout="column" layout-align="center center" layout-padding
                   layout-margin
                   layout-fill>
-              <h2> {{'Please'| translate }} {{'SignIn'| translate }} </h2>
+              <h2> {{'Please'| translate }} {{'LogIn'| translate }} </h2>
               <md-input-container class="md-icon-float" layout-fill>
                 <label> {{'Your'| translate }} {{'UsernameOrEmail'| translate }} </label>
                 <md-icon><i class="fa fa-user fa-lg"></i></md-icon>
@@ -23,7 +23,7 @@
               </md-input-container>
 
               <md-button class="md-primary" type="submit" layout-fill>
-                {{'SignIn'| translate }}
+                {{'LogIn'| translate }}
               </md-button>
             </form>
           </md-content>
@@ -35,42 +35,45 @@
               <h2> {{'Please'| translate }} {{'SignUp'| translate }} </h2>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Username'| translate }} </label>
                 <md-icon><i class="fa fa-user fa-lg"></i></md-icon>
-                <input type="text" name="username" placeholder=" {{'Your'| translate }} {{'Username'| translate }} ">
+                <input type="text" name="username">
               </md-input-container>
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Name'| translate }} </label>
                 <md-icon><i class="fa fa-child fa-lg"></i></md-icon>
-                <input type="text" class="upperCaseFormText" name="name"
-                       placeholder=" {{'Your'| translate }} {{'Name'| translate }} ">
+                <input type="text" class="upperCaseFormText" name="name">
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'LastName'| translate }} </label>
                 <md-icon><i class="fa fa-male fa-lg"></i></md-icon>
-                <input type="text" class="upperCaseFormText" name="lastName"
-                       placeholder=" {{'Your'| translate }} {{'LastName'| translate }} ">
+                <input type="text" class="upperCaseFormText" name="lastName">
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Email'| translate }} </label>
                 <md-icon><i class="fa fa-envelope fa-lg"></i></md-icon>
-                <input type="text" name="email" placeholder=" {{'Your'| translate }} {{'Email'| translate }} ">
+                <input type="text" name="email" >
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Identification'| translate }} </label>
                 <md-icon><i class="fa fa-info fa-lg"></i></md-icon>
-                <input type="text" class="form-control input-sm" name="identification"
-                       placeholder=" {{'Your'| translate }} {{'Identification'| translate }} ">
+                <input type="text" input-sm" name="identification">
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Password'| translate }} </label>
                 <md-icon><i class="fa fa-key fa-lg"></i></md-icon>
-                <input type="password" name="password"
-                       placeholder=" {{'Your'| translate }} {{'Password'| translate }} ">
+                <input type="password" name="password">
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Confirm'| translate }} {{'Password'| translate }} </label>
+
                 <md-icon><i class="fa fa-key fa-lg"></i></md-icon>
-                <input type="password" name="confirmation"
-                       placeholder=" {{'Confirm'| translate }} {{'Password'| translate }} ">
+                <input type="password" name="confirmation">
               </md-input-container>
 
               <md-button class="md-primary" type="submit" layout-fill>
@@ -81,13 +84,13 @@
         </md-tab>
       </md-tabs>
 
-      <div layout="row" layout-align="center center" layout-padding layout-margin layout-fill>
-        <a href="/auth/google" target="_self" title="Google">
-          <i class="fa fa-google-plus-square fa-lg"></i> Google
-        </a>
-        <a href="/auth/facebook" target="_self" title="Facebook">
-          <i class="fa fa-facebook-square fa-lg"></i> Facebook
-        </a>
+      <div layout="row" layout-align="center center" layout-padding layout-padding layout-fill>
+        <md-button class="md-icon-button" aria-label="Google" href="/auth/google" target="_self" title="Google" >
+          <md-icon md-font-icon="fa-google-plus-square" class="fa fa-lg" style="color:#dd4b39; font-size: 30px"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Facebook" href="/auth/facebook" target="_self" title="Facebook" >
+          <md-icon md-font-icon="fa-facebook-square" class="fa fa-lg" style="color:#415C97; font-size: 30px"></md-icon>
+        </md-button>
       </div>
 
     </md-content>
