@@ -9,7 +9,7 @@
             <form action="/auth/local" method="POST" layout="column" layout-align="center center" layout-padding
                   layout-margin
                   layout-fill>
-              <h2> {{'Please'| translate }} {{'SignIn'| translate }} </h2>
+              <h2> {{'Please'| translate }} {{'LogIn'| translate }} </h2>
               <md-input-container class="md-icon-float" layout-fill>
                 <label> {{'Your'| translate }} {{'UsernameOrEmail'| translate }} </label>
                 <md-icon><i class="fa fa-user fa-lg"></i></md-icon>
@@ -84,13 +84,13 @@
         </md-tab>
       </md-tabs>
 
-      <div layout="row" layout-align="center center" layout-padding layout-margin layout-fill>
-        <a href="/auth/google" target="_self" title="Google">
-          <i class="fa fa-google-plus-square fa-lg"></i> Google
-        </a>
-        <a href="/auth/facebook" target="_self" title="Facebook">
-          <i class="fa fa-facebook-square fa-lg"></i> Facebook
-        </a>
+      <div layout="row" layout-align="center center" layout-padding layout-padding layout-fill>
+        <md-button class="md-icon-button" aria-label="Google" href="/auth/google" target="_self" title="Google" >
+          <md-icon md-font-icon="fa-google-plus-square" class="fa fa-lg" style="color:#dd4b39; font-size: 30px"></md-icon>
+        </md-button>
+        <md-button class="md-icon-button" aria-label="Facebook" href="/auth/facebook" target="_self" title="Facebook" >
+          <md-icon md-font-icon="fa-facebook-square" class="fa fa-lg" style="color:#415C97; font-size: 30px"></md-icon>
+        </md-button>
       </div>
 
     </md-content>

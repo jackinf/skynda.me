@@ -47,7 +47,7 @@ module.exports.routes = {
   '/*': {
     view: 'index',
     skipAssets: true,
-    skipRegex: /^\/api\/.*$/
+    skipRegex: /^\/(api|auth)\/.*$/
   }
 
   /***************************************************************************

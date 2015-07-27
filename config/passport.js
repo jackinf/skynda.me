@@ -17,5 +17,26 @@
 module.exports.passport = {
   local: {
     strategy: require('passport-local').Strategy
+  },
+  facebook: {
+    name: 'Facebook',
+    protocol: 'oauth2',
+    strategy: require('passport-facebook').Strategy,
+    options: {
+      clientID: '820794971374546',
+      clientSecret: 'ed16c1bd204f803dc2df8da3ce6c58bb',
+      scope: ['email'] /* email is necessary for login behavior */
+    }
+  },
+
+  google: {
+    scope: ['email'],
+    name: 'Google',
+    protocol: 'oauth2',
+    strategy: require('passport-google-oauth').OAuth2Strategy,
+    options: {
+      clientID: '1052590938688-o0idr1ujb1sh3ml4uki7msrmkglt92n7.apps.googleusercontent.com',
+      clientSecret: 'Rt29-0JFFDrmpYxpa9Dy0Q2c'
+    }
   }
 };
