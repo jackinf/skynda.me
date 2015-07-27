@@ -1,6 +1,17 @@
 {
-  "Welcome": "Bienvenido",
-  "A brand new app.": "Una aplicación de la nueva marca.",
-  "LogIn": "Entrar"
+  "Name"                : "Nombre",
+  "LastName"            : "Apellido",
+  "Email"               : "Correo Electrónico",
+  "Password"            : "Contraseña",
+  "Confirm"             : "Confirmar",
+  "Identification"      : "Identificación",
+  "Information"         : "Información",
+  "Your"                : "Su",
+  "LogIn"               : "Entrar",
+  "SignUp"              : "Registrarse",
+  "SignOut"             : "Cerrar sesión",
+  "Please"              : "Por favor",
+  "Username"            : "Nombre De Usuario",
+  "UsernameOrEmail"     : "Usuario o Email"
 
 }
