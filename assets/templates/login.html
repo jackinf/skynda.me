@@ -1,8 +1,8 @@
 <div ng-controller="authController" layout="row" layout-align-gt-sm="center center" layout-align-sm="center start" flex>
 
-  <md-whiteframe class="md-whiteframe-z5 indexBox" layout="column" layout-padding layout-align="center center"
+  <md-whiteframe class="md-whiteframe-z5" layout="column" layout-padding layout-align="center center"
                  layout-margin>
-    <md-content layout-align="center center" layout-fill>
+    <md-content layout-align="center center" layout-fill style="min-width: 500px">
       <md-tabs md-dynamic-height md-stretch-tabs="always" md-border-bottom layout-fill>
         <md-tab label="{{ 'LogIn'| translate }}">
           <md-content class="md-padding">
@@ -35,42 +35,45 @@
               <h2> {{'Please'| translate }} {{'SignUp'| translate }} </h2>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Username'| translate }} </label>
                 <md-icon><i class="fa fa-user fa-lg"></i></md-icon>
-                <input type="text" name="username" placeholder=" {{'Your'| translate }} {{'Username'| translate }} ">
+                <input type="text" name="username">
               </md-input-container>
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Name'| translate }} </label>
                 <md-icon><i class="fa fa-child fa-lg"></i></md-icon>
-                <input type="text" class="upperCaseFormText" name="name"
-                       placeholder=" {{'Your'| translate }} {{'Name'| translate }} ">
+                <input type="text" class="upperCaseFormText" name="name">
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'LastName'| translate }} </label>
                 <md-icon><i class="fa fa-male fa-lg"></i></md-icon>
-                <input type="text" class="upperCaseFormText" name="lastName"
-                       placeholder=" {{'Your'| translate }} {{'LastName'| translate }} ">
+                <input type="text" class="upperCaseFormText" name="lastName">
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Email'| translate }} </label>
                 <md-icon><i class="fa fa-envelope fa-lg"></i></md-icon>
-                <input type="text" name="email" placeholder=" {{'Your'| translate }} {{'Email'| translate }} ">
+                <input type="text" name="email" >
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Identification'| translate }} </label>
                 <md-icon><i class="fa fa-info fa-lg"></i></md-icon>
-                <input type="text" class="form-control input-sm" name="identification"
-                       placeholder=" {{'Your'| translate }} {{'Identification'| translate }} ">
+                <input type="text" input-sm" name="identification">
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Your'| translate }} {{'Password'| translate }} </label>
                 <md-icon><i class="fa fa-key fa-lg"></i></md-icon>
-                <input type="password" name="password"
-                       placeholder=" {{'Your'| translate }} {{'Password'| translate }} ">
+                <input type="password" name="password">
               </md-input-container>
 
               <md-input-container class="md-icon-float" layout-fill>
+                <label> {{'Confirm'| translate }} {{'Password'| translate }} </label>
+
                 <md-icon><i class="fa fa-key fa-lg"></i></md-icon>
-                <input type="password" name="confirmation"
-                       placeholder=" {{'Confirm'| translate }} {{'Password'| translate }} ">
+                <input type="password" name="confirmation">
               </md-input-container>
 
               <md-button class="md-primary" type="submit" layout-fill>
