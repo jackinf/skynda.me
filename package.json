@@ -1,5 +1,5 @@
 {
-  "name": "guild",
+  "name": "angular-sails-base",
   "private": true,
   "version": "0.0.0",
   "description": "a Sails application",
@@ -42,8 +42,8 @@
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/eduaro/guild.git"
+    "url": "https://github.com/ingedwardyrc/angular-sails-base.git"
   },
-  "author": "eduaro",
+  "author": "ing.edwardyrc",
   "license": ""
 }
