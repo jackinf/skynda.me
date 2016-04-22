@@ -39,30 +39,6 @@ module.exports = {
     },
     rank: {
       type: 'integer'
-    },
-    teams: {
-      collection: 'team',
-      via: 'members'
-    },
-    clubs: {
-      collection: 'club',
-      via: 'members'
-    },
-    masteringClubs: {
-      collection: 'club',
-      via: 'master'
-    },
-    guild: {
-      model: 'guild'
-    },
-    masteringGuild: {
-      model: 'guild'
-    },
-    moderatingGuild: {
-      model: 'guild'
-    },
-    moderatingWorld: {
-      model: 'world'
     }
   }
 
