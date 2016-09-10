@@ -13,6 +13,23 @@ File Description: Place here your custom CSS styles
   color: #119DFD;
 }
 
+.sk-details__icon {
+  margin: 0 auto;
+}
+.sk-text-centralizer {
+  text-align: center;
+}
+
+.sk-block__text {
+  margin-left: 0 !important;
+  margin-right: 5px !important;
+  /*text-align: justify;*/
+}
+
+.sk-details__icon-list-image {
+  float: left;
+  margin-right: 10px;
+}
 
 /* Homepage */
 .sk-hero{
