@@ -36,3 +36,8 @@ File Description: Place here your custom CSS styles
   color: #fff;
   position: absolute;
 }
+
+/* Keypoints */
+.sk-keypoint__image{
+  margin: 0 auto;
+}
