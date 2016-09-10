@@ -6,8 +6,38 @@
  */
 
 module.exports = {
+  identity: 'car',
+  connection: 'skyndaPostgresqlServer',
   attributes: {
-    brand:'string'
+    id: {
+      type: 'text',
+      defaultsTo: function () {
+        return uuid.v4();
+      }
+    },
+    created: 'datetime',
+    vin: 'string',
+    price: 'string',
+    transmission: 'string',
+    mileage: 'string',
+    initialReg: 'string',
+    registrationNumber: 'string',
+    engine: 'string',
+    horsePower: 'string',
+    drive: 'string',
+    doors: 'string',
+    seats: 'string',
+    brand: 'string',
+    model: 'string',
+    color: 'string',
+    bodyType: 'string',
+    cityFuel: 'string',
+    highWayFuel: 'string',
+    images: 'text',
+    isSold: 'boolean',
+    descriptionBrand: 'text',
+    descriptionModel: 'text',
+    archived: 'datetime'
   }
 };
 
