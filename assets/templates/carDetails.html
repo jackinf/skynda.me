@@ -9,25 +9,14 @@
 
       <!-- LEFT COLUMN -->
       <div class="col col-md-7">
-        <div class="row">
-          <h4 class="blue-header">Overview</h4>
 
-          <div class="row">
-            <!-- TODO: icons -->
-          </div>
-        </div>
+        <block header="'Overview'">
+          <!-- TODO: icons -->
+        </block>
 
-        <br />
-
-        <div class="row">
-          <h4 class="blue-header">{{block1.header}}</h4>
-
-          <div class="row">
-            {{block1.description}}
-          </div>
-        </div>
-
-        <br />
+        <block header="block1.header">
+          {{block1.description}}
+        </block>
 
         <block header="block3.header">
           <!-- TODO: nice features -->
