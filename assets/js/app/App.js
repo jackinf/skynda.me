@@ -20,6 +20,10 @@ legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
     .state('login', {
       url: '/login',
       templateUrl: '/templates/login.html'
+    })
+    .state('car-details', {
+      url: '/car-details',
+      templateUrl: '/templates/carDetails.html'
     });
 
   $urlRouterProvider.otherwise('/');
