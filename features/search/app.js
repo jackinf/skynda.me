@@ -1,1 +1,1 @@
-angular.module('app', ['component.search']);
+angular.module('app', ['component.search', 'component.image-grid']);
