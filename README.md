@@ -13,7 +13,7 @@ For Windows users:
 
 Install chocolatey at https://chocolatey.org/
 
-    cinst install git npm nodejs
+    cinst git npm nodejs
     npm install -g bower sails grunt
     npm install
     bower install
