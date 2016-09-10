@@ -3,7 +3,7 @@
  */
 
 angular.module('application').component('simple', {
-  templateUrl: '/templates/components/simple.html',
+  templateUrl: '/js/components/simple.html',
   controller: function ($scope, $element, $attrs) {
     console.log('simpel component initialized');
     $scope.title = "hello";
