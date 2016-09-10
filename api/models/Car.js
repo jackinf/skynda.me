@@ -6,6 +6,8 @@
  */
 
 module.exports = {
+  identity: 'car',
+  connection: 'skyndaPostgresqlServer',
   attributes: {
     brand:'string'
   }
