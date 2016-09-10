@@ -5,6 +5,8 @@
             ng-style="option.style" 
             ng-click="option.toggled = !option.toggled">
             {{option.name}}
-        </button>
+
+            <span ng-if="!option.name && option.toggled" class="glyphicon glyphicon-ok"></span>
+        </button>        
     </li>
 </ul>
