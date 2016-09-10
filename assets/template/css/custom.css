@@ -96,18 +96,25 @@ File Description: Place here your custom CSS styles
 .sk-hero__image{
   height: 100%;
   width: 100%;
-  border: 1px solid blue;
 }
 
 .sk-hero__text {
   min-height: 100px;
   width: 100%;
-  border: 1px solid red;
-  background-color: black; /* TODO: Õige värv ja opacity */
-  opacity: 0.5;
+  /*background-color: black; /* TODO: Õige värv ja opacity */
+  /*opacity: 0.5;*/
   bottom: 0;
   color: #fff;
   position: absolute;
+}
+.sk-hero__text:before{
+  content: '';
+  left: 0;
+  right: 0;
+  position: absolute;
+  height: 100%;
+  background: black;
+  opacity: 0.5;
 }
 
 
