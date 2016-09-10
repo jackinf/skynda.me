@@ -2,14 +2,14 @@
 
 A [Sails](http://sailsjs.org) template with angular and https by default
 
-For Linux users:
+### For Linux users: ###
 
     sudo apt-get install git npm nodejs
     sudo npm install -g bower sails grunt
     npm install
     bower install
 
-For Windows users:
+### For Windows users: ###
 
 Install chocolatey at https://chocolatey.org/
 
@@ -28,6 +28,6 @@ Install chocolatey at https://chocolatey.org/
 
 to start the server
 
-sails lift --silly
+    sails lift --silly
 
-Go to https://localhost: 1337
+Go to https://localhost:1337
