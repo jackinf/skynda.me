@@ -3,11 +3,10 @@
  */
 
 angular.module('application').component('keypoint', {
-  templateUrl: '/js/components/keypoint.html',
+  templateUrl: '/js/components/keypoint/keypoint.html',
   controller: function ($scope, $element, $attrs) {
     $scope.title = $attrs.title;
-    $scope.content = "This "; //$attrs.content;
+    $scope.content = $attrs.content;
     $scope.img = $attrs.img;
-
   }
 });
