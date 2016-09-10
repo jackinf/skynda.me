@@ -31,6 +31,26 @@ File Description: Place here your custom CSS styles
   margin-right: 10px;
 }
 
+.sk-details__stars-outer-container {
+  border: 1px solid #efefef;
+  border-radius: 5px;
+  padding: 5px;
+  height: 60px;
+  width: 410px;
+}
+.sk-details__stars-inner-container {
+  padding: 0 10px 0 0;
+}
+.sk-details__star {
+  float:left;
+}
+.sk-details__stars_euroncap {
+  float:left;
+  margin-left: 50px;
+  height: 50px;
+}
+
+
 /* Homepage */
 .sk-hero{
   padding-top:0;
