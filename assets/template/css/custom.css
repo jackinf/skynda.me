@@ -8,3 +8,26 @@ Created: August 2014
 License URI: http://support.wrapbootstrap.com/
 File Description: Place here your custom CSS styles
 */
+
+/* Homepage */
+.sk-hero{
+  padding-top:0;
+  padding-bottom: 0;
+  position: relative;
+}
+.sk-hero__image{
+  height: 100%;
+  width: 100%;
+  border: 1px solid blue;
+}
+
+.sk-hero__text {
+  min-height: 100px;
+  width: 100%;
+  border: 1px solid red;
+  background-color: black; /* TODO: Õige värv ja opacity */
+  opacity: 0.5;
+  bottom: 0;
+  color: #fff;
+  position: absolute;
+}
