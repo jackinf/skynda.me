@@ -10,9 +10,45 @@ File Description: Place here your custom CSS styles
 */
 
 .blue-header {
-  color: #119DFD;
+  color: #019BFF
 }
 
+.orange-header {
+  color: #FBBB68;
+}
+.sk-navbar{
+  height: 70px;
+}
+.sk-logo{
+  padding: 0;
+}
+
+
+.navbar-default .navbar-nav > .sk-menu--sell >a,
+.navbar-default .navbar-nav > .sk-menu--buy > a{
+  margin-top: 8px;
+  font-size: 24px;
+}
+.navbar-default .navbar-nav > .sk-menu--sell >a:hover,
+ .navbar-default .navbar-nav > .sk-menu--buy > a:hover{
+  color: #5A5B5C;
+}
+.navbar-default .navbar-nav > .sk-menu--sell >a{
+  color: #019BFF;
+}
+
+.navbar-default .navbar-nav > .sk-menu--buy > a{
+  color: #FBBB68;
+}
+
+.sk-logo img{
+  height:60px;
+  margin-right: 20px;
+}
+.sk-logo img + img{
+  height: 48px;
+  padding-top: 10px;
+}
 .sk-details__icon {
   margin: 0 auto;
 }
