@@ -1,4 +1,4 @@
-var legislatorApp = angular.module('application', ['ngMaterial', 'ui.router' , 'ngSails', 'luegg.directives', 'pascalprecht.translate']);
+var legislatorApp = angular.module('application', ['ngMaterial', 'ui.router' , 'ngSails', 'luegg.directives', 'pascalprecht.translate', 'skynda.search-controller']);
 
 legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProvider, $mdThemingProvider, $translateProvider) {
 
@@ -24,6 +24,10 @@ legislatorApp.config(function ($stateProvider, $urlRouterProvider, $locationProv
     .state('car-details', {
       url: '/car-details',
       templateUrl: '/templates/carDetails.html'
+    })
+    .state('search', {
+      url: '/search',
+      templateUrl: '/templates/search.html'
     });
 
   $urlRouterProvider.otherwise('/');
