@@ -6,7 +6,7 @@ function blockController($scope, $element, $attrs) {}
 
 angular.module("application").component("block", {
   transclude: true,
-  templateUrl: '/templates/components/block.html',
+  templateUrl: '/js/components/block/block.html',
   controller: blockController,
   bindings: {
     header: '<'
