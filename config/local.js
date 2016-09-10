@@ -6,7 +6,17 @@ module.exports = {
     cert: require('fs').readFileSync(__dirname + '/ssl/cert.pem')
   },
   connections: {
-    'default': 'disk',
+    'default': 'postgres',
+    postgres: {
+      adapter: 'sails-postgresql',
+      database: 'skynda',
+      host: 'localhost',
+      user: 'deploy',
+      password: 'devel',
+      port: 5432,
+      poolSize: 10,
+      ssl: false
+    },
     disk: {
       module: 'sails-disk'
     }
