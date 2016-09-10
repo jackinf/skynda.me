@@ -40,4 +40,6 @@ File Description: Place here your custom CSS styles
 /* Keypoints */
 .sk-keypoint__image{
   margin: 0 auto;
+  max-width: 128px;
+  height: auto;
 }

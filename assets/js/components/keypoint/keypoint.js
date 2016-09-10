@@ -3,7 +3,7 @@
  */
 
 angular.module('application').component('keypoint', {
-  templateUrl: '/templates/components/keypoint.html',
+  templateUrl: '/js/components/keypoint.html',
   controller: function ($scope, $element, $attrs) {
     $scope.title = $attrs.title;
     $scope.content = "This "; //$attrs.content;
