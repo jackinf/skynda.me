@@ -222,3 +222,23 @@ file. The documentation to the project is licensed under the
 
 ---
 Made with ♥ by Konstantin Tarkus ([@koistya](https://twitter.com/koistya)) and [contributors](https://github.com/kriasoft/react-starter-kit/graphs/contributors)
+
+---
+
+React Starter Kit (https://github.com/kriasoft/react-starter-kit)
+
+
+1. Install Node-Gyp
+https://github.com/nodejs/node-gyp
+
+npm install -g node-gyp
+
+2. Install React starter kit
+
+git clone -o react-starter-kit -b master --single-branch https://github.com/kriasoft/react-starter-kit.git SkyndaReact
+$ cd SkyndaReact
+
+Install nodejs 6.5.0+ and npm 3.10.7+.
+Then:
+npm install
+npm start
