@@ -22,6 +22,7 @@ import image_happy from './../../public/images/standard/happy.png';
 import image_cancel from './../../public/images/standard/cancel.png';
 import image_4_2x from './../../public/images/standard/image-4@2x.png';
 
+const slideshow = (<div>Slideshow goes here...</div>);
 // const slideshow = (<div className="banner">
 //   <button ng-click="is360View=!is360View" type="button" className="btn btn-primary btn--360" aria-label="Left Align" > {/* style="position: absolute; z-index: 100" */}
 //     <span ng-if="!is360View"><img src="images/group-78@2x.png" alt="" /> Look Inside</span>
@@ -74,8 +75,8 @@ import image_4_2x from './../../public/images/standard/image-4@2x.png';
 // </div>);
 
 class Skblock extends React.Component {
-  render() {return (<div>
-    <h2>{this.props.header}</h2>
+  render() {return (<div className="row">
+    <h4 className={s.blue_header}>{this.props.header}</h4>
     <div>{ this.props.children }</div>
   </div>)}
 }
@@ -87,17 +88,13 @@ class CarDetails extends React.Component {
 
         <div className="row">
 
-          {/*<!-- slideshow start -->*/}
-          {/*<!-- ================ -->*/}
-
-          {/*<!-- ================ -->*/}
-          {/*<!-- slideshow end -->*/}
+          {slideshow}
 
           <br/>
 
           {/*<!-- LEFT COLUMN -->*/}
           <div className="col col-md-7">
-            <Skblock header="'Overview'">
+            <Skblock header={'Overview'}>
               <br/>
               {/*<icon-Skblock icon="'/images/group-114.png'" text="car.mileage"></icon-Skblock>*/}
               {/*<icon-Skblock icon="'/images/group-115.png'" text="car.transmission"></icon-Skblock>*/}
@@ -118,30 +115,30 @@ class CarDetails extends React.Component {
 
             <Skblock header={'Nice features'}>
               <div className="col col-md-4" > {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                 Steering Wheel Controls
               </div>
               <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                 Paddle Shifters
               </div>
               <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                 Premium Lights
               </div>
               <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                 Turbocharger
               </div>
               <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                 Parking Sensors
               </div>
             </Skblock>
 
             <Skblock header={'Car History'}>
               <div className="col col-md-4">  {/*style="padding: 5px 0;"*/}
-                <img src={image_diploma_1} width="24" className="sk-details__icon-list-image"/>
+                <img src={image_diploma_1} width="24" className={s.sk_details__icon_list_image}/>
                 No Problems Found
               </div>
               <div className="col col-md-4">  {/*style="padding: 5px 0;"*/}
@@ -151,7 +148,7 @@ class CarDetails extends React.Component {
 
             <Skblock header={'Petrol Consumption'}>
               <div className="col col-md-4">  {/*style="padding: 5px 0;"*/}
-                <img src={image_gas_station_2x} className="sk-details__icon-list-image"/>
+                <img src={image_gas_station_2x} className={s.sk_details__icon_list_image}/>
               </div>
               <div className="col col-md-4">  {/*style="padding: 5px 0;"*/}
                 <div className="row">
@@ -259,15 +256,15 @@ class CarDetails extends React.Component {
             </Skblock>
 
             <Skblock header={'Safety'}>
-              <div className="sk-details__stars-outer-container">
-                <div className="sk-details__stars-inner-container">
-                  <img className="sk-details__star" src={image_star_2x}/>
-                  <img className="sk-details__star" src={image_star_2x}/>
-                  <img className="sk-details__star" src={image_star_2x}/>
-                  <img className="sk-details__star" src={image_star_2x}/>
-                  <img className="sk-details__star" src={image_star_2x}/>
+              <div className={s.sk_details__stars_outer_container}>
+                <div className={s.sk_details__stars_inner_container}>
+                  <img className={s.sk_details__star} src={image_star_2x}/>
+                  <img className={s.sk_details__star} src={image_star_2x}/>
+                  <img className={s.sk_details__star} src={image_star_2x}/>
+                  <img className={s.sk_details__star} src={image_star_2x}/>
+                  <img className={s.sk_details__star} src={image_star_2x}/>
 
-                  <img className="sk-details__stars_euroncap" src={image_4_2x}/>
+                  <img className={s.sk_details__stars_euroncap} src={image_4_2x}/>
                 </div>
               </div>
             </Skblock>
@@ -275,43 +272,44 @@ class CarDetails extends React.Component {
             <Skblock header={'Our Certified Inspector\'s Report'}>
               <div > {/*style="margin-left: 30px"*/}
                 <div className="row">
-                  <div className="col col-md-4"><label className="sk-details__certified_developer">Mr. Happy</label></div>
+                  <div className="col col-md-4"><label className={s.sk_details__certified_developer}>Mr. Happy</label></div>
                   <div className="col col-md-3"><img src={image_happy} width="130" alt="happy" /></div>
                   <div className="col col-md-5">
-                    <button className="btn btn-default sk-details__certified_have_a_question">Have a question?</button>
+                    {/*<button className="btn btn-default sk_details__certified_have_a_question">Have a question?</button>*/}
+                    {/*<button className={Object.assign("btn", "btn-default", s.sk_details__certified_have_a_question)}>Have a question?</button>*/}
                   </div>
                 </div>
                 <div className="row">
                   <h4>Category 1</h4>
                   <div className="row">
                     <div className="col col-md-6"> {/*style="padding: 5px 0;"*/}
-                      <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                      <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                       Automatic transmission flawless in cold temperature
                     </div>
                     <div className="col col-md-6"> {/*style="padding: 5px 0;"*/}
-                      <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                      <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                       Steering wheel centered
                     </div>
                   </div>
 
                   <div className="row">
                     <div className="col col-md-6"> {/*style="padding: 5px 0;"*/}
-                      <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                      <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                       Steering wheel centered
                     </div>
                     <div className="col col-md-6"> {/*style="padding: 5px 0;"*/}
-                      <img src={image_cancel} width="24" className="sk-details__icon-list-image"/>
+                      <img src={image_cancel} width="24" className={s.sk_details__icon_list_image}/>
                       Automatic transmission flawless in cold temperature
                     </div>
                   </div>
 
                   <div className="row">
                     <div className="col col-md-6"> {/*style="padding: 5px 0;"*/}
-                      <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                      <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                       Automatic transmission flawless in cold temperature
                     </div>
                     <div className="col col-md-6"> {/*style="padding: 5px 0;"*/}
-                      <img src={image_ok} width="24" className="sk-details__icon-list-image"/>
+                      <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
                       Steering wheel centered
                     </div>
                   </div>
@@ -329,32 +327,32 @@ class CarDetails extends React.Component {
             <Skblock header={'Skynda Care'}>
               <div className="row">
                 <div className="col col-md-4"> {/*style="text-align: center; margin-bottom: 20px"*/}
-                  <img className="sk-details__icon" src={image_group_124}/>
+                  <img className={s.sk_details__icon} src={image_group_124}/>
                   <h5>Vehicle Protection</h5>
                   <section>Award-winning repair coverage</section>
                 </div>
                 <div className="col col-md-4">
-                  <img className="sk-details__icon" src={image_group_125}/>
+                  <img className={s.sk_details__icon} src={image_group_125}/>
                   <h5>Vehicle Protection</h5>
                   <section>Award-winning repair coverage</section>
                 </div>
                 <div className="col col-md-4">
-                  <img className="sk-details__icon" src={image_group_126}/>
+                  <img className={s.sk_details__icon} src={image_group_126}/>
                   <h5>Vehicle Protection</h5>
                   <section>Award-winning repair coverage</section>
                 </div>
                 <div className="col col-md-4">
-                  <img className="sk-details__icon" src={image_group_127}/>
+                  <img className={s.sk_details__icon} src={image_group_127}/>
                   <h5>Vehicle Protection</h5>
                   <section>Award-winning repair coverage</section>
                 </div>
                 <div className="col col-md-4">
-                  <img className="sk-details__icon" src={image_group_128}/>
+                  <img className={s.sk_details__icon} src={image_group_128}/>
                   <h5>Vehicle Protection</h5>
                   <section>Award-winning repair coverage</section>
                 </div>
                 <div className="col col-md-4">
-                  <img className="sk-details__icon" src={image_group_129}/>
+                  <img className={s.sk_details__icon} src={image_group_129}/>
                   <h5>Vehicle Protection</h5>
                   <section>Award-winning repair coverage</section>
                 </div>
@@ -370,11 +368,11 @@ class CarDetails extends React.Component {
                     </div>
                     <div className="col col-md-6">
                       <div> {/*style="float: right"*/}
-                        <img className="sk-details__star" src={image_star}/>
-                        <img className="sk-details__star" src={image_star}/>
-                        <img className="sk-details__star" src={image_star}/>
-                        <img className="sk-details__star" src={image_star}/>
-                        <img className="sk-details__star" src={image_unstar}/>
+                        <img className={s.sk_details__star} src={image_star}/>
+                        <img className={s.sk_details__star} src={image_star}/>
+                        <img className={s.sk_details__star} src={image_star}/>
+                        <img className={s.sk_details__star} src={image_star}/>
+                        <img className={s.sk_details__star} src={image_unstar}/>
                       </div>
                     </div>
                   </div>

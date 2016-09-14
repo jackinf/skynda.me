@@ -14,22 +14,48 @@ import Link from '../Link';
 import Navigation from '../Navigation';
 import logoUrl from './logo-small.png';
 
-function Header() {
-  return (
-    <div className={s.root}>
-      <div className={s.container}>
-        <Navigation className={s.nav} />
-        <Link className={s.brand} to="/">
-          <img src={logoUrl} width="38" height="38" alt="React" />
-          <span className={s.brandTxt}>Your Company</span>
-        </Link>
-        <div className={s.banner}>
-          <h1 className={s.bannerTitle}>React</h1>
-          <p className={s.bannerDesc}>Complex web apps made easy</p>
-        </div>
+import {Button} from 'react-bootstrap';
+import image_1 from './../../public/images/standard/skynda logo 4-mask-4@2x.png';
+import image_2 from './../../public/images/standard/SKYNDA@2x.png';
+
+class Header extends React.Component {
+
+  sellCar = () => {
+
+  };
+
+  render() {
+    return (
+      <div>
+        {/*<nav className="sk_navbar navbar navbar_default">*/}
+        <nav className={`${s.sk_navbar} ${s.navbar} ${s.navbar_default}`}>
+          <div className="container">
+            <div className={s.navbar_header}>
+              <Button type="button" className="navbar_toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                      aria-expanded="false" aria-controls="navbar">
+                <span className="sr-only">Toggle navigation</span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </Button>
+              <a className={`${s.sk_logo} navbar_brand`} href="/">
+                <img className="pull-left" src={image_1} />
+                <img className="" src={image_2} />
+              </a>
+            </div>
+            <div id="navbar" className="navbar_collapse collapse">
+              <ul className="nav navbar-nav pull-right">
+                <li className={s.sk_menu__sell}><a href="#" onClick={e => this.sellCar(e)} className="orange_header">Sell Your Car</a></li>
+                <li className={s.sk_menu__buy}><a href="/search" className="blue_header">Buy Your Car</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
       </div>
-    </div>
-  );
+    );
+
+  }
 }
 
 export default withStyles(s)(Header);
