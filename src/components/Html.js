@@ -12,6 +12,7 @@ function Html({ title, description, style, script, children }) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         {style && <style id="css" dangerouslySetInnerHTML={{ __html: style }} />}
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"/>
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
@@ -24,7 +25,7 @@ function Html({ title, description, style, script, children }) {
           />
         }
         {analytics.google.trackingId &&
-          <script src="https://www.google-analytics.com/analytics.js" async defer />
+          <script src="analytics.js" async defer />
         }
       </body>
     </html>
