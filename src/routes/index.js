@@ -16,6 +16,7 @@ import login from './login';
 import register from './register';
 import content from './content';
 import notFound from './notFound';
+import carDetails from './carDetails';
 
 export default {
 
@@ -26,6 +27,7 @@ export default {
     home,
     login,
     register,
+    carDetails,
 
     // place new routes before...
     content,
