@@ -10,7 +10,7 @@ import s from './details.css';
 import image_ok from './../../public/images/standard/ok.png';
 import image_diploma_1 from './../../public/images/standard/diploma_1.png';
 import image_star_2x from './../../public/images/standard/star@2x.png';
-// import image_4_2x from './../../public/images/standard/image-4@2x.png';
+import image_4_2x from './../../public/images/standard/image-4@2x.png';
 
 // Local components
 import Skblock from './components/details.skblock';
@@ -25,14 +25,7 @@ import Checkout from './components/details.checkout';
 
 class CarDetails extends React.Component {
 
-  constructor( ){
-    super();
-    this.test = this.test.bind(this);
-  }
-
   render() {
-    var self = this;
-    console.log(self);
     return (<div>
       <div className="container">
 
@@ -107,7 +100,7 @@ class CarDetails extends React.Component {
                   <img className={s.sk_details__star} src={image_star_2x}/>
                   <img className={s.sk_details__star} src={image_star_2x}/>
 
-                  {/*<img className={s.sk_details__stars_euroncap} src={image_4_2x}/>*/}
+                  <img className={s.sk_details__stars_euroncap} src={image_4_2x}/>
                 </div>
               </div>
             </Skblock>
