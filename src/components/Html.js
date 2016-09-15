@@ -13,6 +13,7 @@ function Html({ title, description, style, script, children }) {
         <link rel="apple-touch-icon" href="apple-touch-icon.png" />
         {style && <style id="css" dangerouslySetInnerHTML={{ __html: style }} />}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"/>
+        {/*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>   */}
       </head>
       <body>
         <div id="app" dangerouslySetInnerHTML={{ __html: children }} />

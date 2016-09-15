@@ -3,18 +3,18 @@
  */
 
 import React from 'react';
-import CarDetails from './CarDetails';
+import Details from './details';
 
 const title = 'Car details';
 
 export default {
 
-  path: '/car',
+  path: '/details',
 
   action() {
     return {
       title,
-      component: <CarDetails />,
+      component: <Details />,
     };
   },
 

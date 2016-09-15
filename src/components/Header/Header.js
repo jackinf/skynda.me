@@ -12,9 +12,7 @@ import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Header.css';
 import Link from '../Link';
 import Navigation from '../Navigation';
-import logoUrl from './logo-small.png';
 
-import {Button} from 'react-bootstrap';
 import image_1 from './../../public/images/standard/skynda logo 4-mask-4@2x.png';
 import image_2 from './../../public/images/standard/SKYNDA@2x.png';
 
@@ -31,16 +29,9 @@ class Header extends React.Component {
         <nav className={`${s.sk_navbar} ${s.navbar} ${s.navbar_default}`}>
           <div className="container">
             <div className={s.navbar_header}>
-              <Button type="button" className="navbar_toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                      aria-expanded="false" aria-controls="navbar">
-                <span className="sr-only">Toggle navigation</span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-                <span className="icon-bar"></span>
-              </Button>
               <a className={`${s.sk_logo} navbar_brand`} href="/">
                 <img className="pull-left" src={image_1} />
-                <img className="" src={image_2} />
+                <img src={image_2} />
               </a>
             </div>
             <div id="navbar" className="navbar_collapse collapse">

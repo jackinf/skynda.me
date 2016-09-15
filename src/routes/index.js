@@ -16,7 +16,7 @@ import login from './login';
 import register from './register';
 import content from './content';
 import notFound from './notFound';
-import carDetails from './carDetails';
+import carDetails from './details';
 
 export default {
 
