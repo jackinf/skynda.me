@@ -11,7 +11,8 @@ import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
 import heroImageUrl from './../../public/images/standard/hero-01-2.jpg';
-console.log(heroImageUrl);
+
+import RaisedButton from 'material-ui/RaisedButton';
 
 function Home({ news }) {
   return (
@@ -26,7 +27,8 @@ function Home({ news }) {
                   <h2>Buying a pre-used car has never been so fun, easy and secure</h2>
                 </div>
                 <div className="col-md-3">
-                  <a className="btn btn-primary read_more_button" href="#" role="button">Read More</a> {/* styleName="margin-top:20px;"  */}
+                  <RaisedButton label="Default" href="details" />
+                  {/*<a className="btn btn-primary read_more_button" href="#" role="button">Read More</a> /!* styleName="margin-top:20px;"  *!/*/}
                 </div>
               </div>
             </div>

@@ -5,74 +5,29 @@
 import React from 'react';
 import s from './../details.css';
 
+// Material-UI
+import Dialog from 'material-ui/Dialog';
+import FlatButton from 'material-ui/FlatButton';
+import RaisedButton from 'material-ui/RaisedButton';
+import {List, ListItem} from 'material-ui/List';
+import Subheader from 'material-ui/Subheader';
+import Divider from 'material-ui/Divider';
+import Checkbox from 'material-ui/Checkbox';
+
 const tab1 = (<li className="tab-pane fade active in" id="htab1">
   <div className="row">
     <div className="col-md-12">
-      <ul className="list-icons">
-        <li>
-          <div className="row">
-            <div className="col-md-6">
-              <label>
-                <input type="checkbox" className="checkbox checkbox-inline" defaultChecked={true} /> Car Price
-              </label>
-            </div>
-            <div className="col-md-6 text-align-right text-bold">
-              {/*{{carData.price}} €*/}
-            </div>
-          </div>
-        </li>
-        <li>
-          <div className="row">
-            <div className="col-md-6">
-              <label>
-                <input type="checkbox" className="checkbox checkbox-inline" /> Insurance by Salva
-              </label>
-            </div>
-            <div className="col-md-6 text-align-right text-bold">20 €</div>
-          </div>
-        </li>
-        <li>
-          <div className="row">
-            <div className="col-md-6">
-              <label>
-                <input type="checkbox" className="checkbox checkbox-inline" /> Kasko by Salva
-              </label>
-            </div>
-            <div className="col-md-6 text-align-right text-bold">40 €</div>
-          </div>
-        </li>
-        <li>
-          <div className="row">
-            <div className="col-md-6">
-              <label>
-                <input type="checkbox" className="checkbox checkbox-inline" defaultChecked={true} /> Full Tank on Delivery
-              </label>
-            </div>
-            <div className="col-md-6 text-align-right text-bold">70 €</div>
-          </div>
-        </li>
-        <li>
-          <div className="row">
-            <div className="col-md-6">
-              <label>
-                <input type="checkbox" className="checkbox checkbox-inline" /> Other
-              </label>
-            </div>
 
-            <div className="col-md-6 text-align-right text-bold">18 €</div>
-          </div>
-        </li>
-        <li>
-          <div className="row">
-            <div className="col-md-6">
-              <label>
-                <input type="checkbox" className="checkbox checkbox-inline" defaultChecked={true} /> Service
-              </label>
-            </div>
-            <div className="col-md-6 text-align-right text-bold">109 €</div>
-          </div>
-        </li>
-      </ul>
+      <List>
+        <Subheader>Buying a car</Subheader>
+        <ListItem primaryText="Car Price"           secondaryText="5600 €" leftCheckbox={<Checkbox />} />
+        <ListItem primaryText="Insurance by Salva"  secondaryText="20  €" leftCheckbox={<Checkbox />} />
+        <ListItem primaryText="Kasko by Salva"      secondaryText="40 €" leftCheckbox={<Checkbox />} />
+        <ListItem primaryText="Full Tank on Delivery" secondaryText="70 €" leftCheckbox={<Checkbox />} />
+        <ListItem primaryText="Other"               secondaryText="18 €" leftCheckbox={<Checkbox />} />
+        <ListItem primaryText="Service"             secondaryText="109 €" leftCheckbox={<Checkbox />} />
+      </List>
+
     </div>
   </div>
 </li>);
@@ -127,6 +82,7 @@ const tab2 =(<li className="tab-pane fade active in" id="htab2">
   </div>
 </li>);
 
+
 class Checkout extends React.Component {
 
   constructor() {
@@ -139,12 +95,43 @@ class Checkout extends React.Component {
     this.setState({leaseTab: toggled});
   };
 
-  openCheckoutModal = () => {
-    // TODO: open modal
+  handleOpen = () => {
+    this.setState({open: true});
+  };
+
+  handleClose = () => {
+    this.setState({open: false});
   };
 
   render() {
+    const actions = [
+      <FlatButton
+        label="Cancel"
+        primary={true}
+        onTouchTap={this.handleClose}
+      />,
+      <FlatButton
+        label="Submit"
+        primary={true}
+        keyboardFocused={true}
+        onTouchTap={this.handleClose}
+      />,
+    ];
+
     return (<div id="scroller" className="checkout-container">
+
+      <Dialog
+        title="Dialog With Actions"
+        actions={actions}
+        modal={false}
+        open={this.state.open}
+        onRequestClose={this.handleClose}
+      >
+        The actions in this window were passed in as an array of React objects.
+
+
+      </Dialog>
+
       <ul className="nav nav-tabs" role="tablist">
         <li className="active col-md-6">
           <a href="#" role="tab" aria-expanded="true" onClick={e => this.changeCheckoutTab(e)}>
@@ -169,12 +156,12 @@ class Checkout extends React.Component {
       </ul>
 
       <div className="tab-content">
-        {this.state.leaseTab ? tab1 : tab2}
+        {this.state.leaseTab ? tab2 : tab1}
       </div>
 
       {this.state.leaseTab
-        ? (<div className="btn-checkout-container"><a className="btn btn-primary" onClick={this.openCheckoutModal}>Lease</a></div>)
-        : (<div className="btn-checkout-container"><a className="btn btn-primary" onClick={this.openCheckoutModal}>Checkout</a></div>)}
+        ? (<RaisedButton label="Lease" onTouchTap={this.handleOpen} />)
+        : (<RaisedButton label="Checkout" onTouchTap={this.handleOpen} />)}
 
     </div>);
   }

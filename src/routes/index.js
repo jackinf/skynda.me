@@ -8,6 +8,8 @@
  */
 
 import React from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from '../components/App';
 
 // Child routes
@@ -17,6 +19,10 @@ import register from './register';
 import content from './content';
 import notFound from './notFound';
 import carDetails from './details';
+
+injectTapEventPlugin();
+
+
 
 export default {
 
@@ -49,7 +55,12 @@ export default {
       // Override the result of child route with extensions
       title: `${route.title || 'Untitled Page'} - www.reactstarterkit.com`,
       description: route.description || '',
-      component: <App context={context}>{route.component}</App>,
+
+      /*
+       We need to wrap the entire application with MuiThemeProvider in order for all material-ui components to work.
+       See https://www.npmjs.com/package/material-ui
+       */
+      component: (<MuiThemeProvider><App context={context}>{route.component}</App></MuiThemeProvider>),
     };
   },
 
