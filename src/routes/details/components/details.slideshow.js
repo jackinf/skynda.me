@@ -1,8 +1,31 @@
 /**
  * Created by zekar on 9/15/2016.
  */
+var React = require('react');
+var Carousel = require('nuka-carousel');
 
-const Slideshow = () => (<div>Slideshow goes here...</div>);
+// Images
+import image1 from './../../../public/images/cars/accord/accord.jpg';
+import image2 from './../../../public/images/cars/accord/accord2.jpg';
+import image3 from './../../../public/images/cars/accord/accord3.jpg';
+import image4 from './../../../public/images/cars/accord/accord4.jpg';
+
+const images = [image1, image2, image3, image4];
+
+const Slideshow = React.createClass({
+  mixins: [Carousel.ControllerMixin],
+  render() {
+    let imageElements = images.map((image, i) => (<img key={i} src={image} />));
+
+    return (
+      <Carousel autoplay={true} wrapAround={true}>
+        {imageElements}
+      </Carousel>
+    )
+  }
+});
+
+{/*const Slideshow = () => (<div>Slideshow goes here...</div>);*/}
 
 // const Slideshow = () => (<div className="banner">
 //   <button ng-click="is360View=!is360View" type="button" className="btn btn-primary btn--360" aria-label="Left Align" > {/* style="position: absolute; z-index: 100" */}
