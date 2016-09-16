@@ -23,124 +23,101 @@ import SkyndaCare from './components/details.skynda-care';
 import Reviews from './components/details.reviews';
 import Checkout from './components/details.checkout';
 
+import {StickyContainer, Sticky} from 'react-sticky';
+
 class CarDetails extends React.Component {
-
   render() {
-    return (<div>
-
+    return (
+      <div>
         <div className="container">
-
-        <div className="row">
-
           <Slideshow />
-
-          <br/>
-
-          {/*<!-- LEFT COLUMN -->*/}
-          <div className="col col-md-7">
-            <Overview />
-            <br />
-
-            <Skblock header={'What\'s this model about?'}>
-              {/*{{car.descriptionBrand}}*/}
-            </Skblock>
-            <br />
-
-            <Skblock header={'We have it in excellent condition'}>
-              {/*{{car.descriptionBrand}}*/}
-            </Skblock>
-            <br />
-
-            <Skblock header={'Nice features'}>
-              <div className="col col-md-4" > {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
-                Steering Wheel Controls
-              </div>
-              <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
-                Paddle Shifters
-              </div>
-              <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
-                Premium Lights
-              </div>
-              <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
-                Turbocharger
-              </div>
-              <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
-                <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
-                Parking Sensors
-              </div>
-            </Skblock>
-            <br />
-
-            <Skblock header={'Car History'}>
-              <div className="col col-md-4">  {/*style="padding: 5px 0;"*/}
-                <img src={image_diploma_1} width="24" className={s.sk_details__icon_list_image}/>
-                No Problems Found
-              </div>
-              <div className="col col-md-4">  {/*style="padding: 5px 0;"*/}
-                <label>VIN code: </label> WVW7454WBVNVHD
-              </div>
-            </Skblock>
-            <br />
-
-            <PetrolConsumption/>
-            <br />
-
-            <Performance />
-            <br />
-
-            <Skblock header={'Safety'}>
-              <div className={s.sk_details__stars_outer_container}>
-                <div className={s.sk_details__stars_inner_container}>
-                  <img className={s.sk_details__star} src={image_star_2x}/>
-                  <img className={s.sk_details__star} src={image_star_2x}/>
-                  <img className={s.sk_details__star} src={image_star_2x}/>
-                  <img className={s.sk_details__star} src={image_star_2x}/>
-                  <img className={s.sk_details__star} src={image_star_2x}/>
-
-                  <img className={s.sk_details__stars_euroncap} src={image_4_2x}/>
-                </div>
-              </div>
-            </Skblock>
-            <br />
-
-            <InspectorsReport />
-            <br />
-
-            <SkyndaCare />
-            <br />
-
-            <Reviews />
-            <br />
-
-            <Skblock header={'Other cars that you might like'}>
-              {/*<image-grid ng-if="similarcars && similarcars.length > 0" values="similarcars"></image-grid>*/}
-            </Skblock>
-            <br />
-
-          </div>
-
-          <div className="col col-md-5">
-            <Checkout />
-            {/*<checkout ng-if="car" car="car"></checkout>*/}
-          </div>
         </div>
 
-        {/*<!--<div className="row">-->*/}
-        {/*<!--<Skblock header="'Other cars that you might like'">-->*/}
-        {/*<!--<image-grid ng-if="similarcars && similarcars.length > 0" values="similarcars"></image-grid>-->*/}
+        <br />
 
-        {/*<!--&lt;!&ndash;<cars-grid cars="similarcars"></cars-grid>&ndash;&gt;-->*/}
-        {/*<!--</Skblock>-->*/}
-        {/*<!--</div>-->*/}
+        <div className="container">
+          <StickyContainer>
+            <div className="row">
+              <div className="col col-md-7">
+                <Overview />
+
+                <Skblock header={'What\'s this model about?'}>...</Skblock>
+
+                <Skblock header={'We have it in excellent condition'}>...</Skblock>
+
+                <Skblock header={'Nice features'}>
+                  <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
+                    <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
+                    Steering Wheel Controls
+                  </div>
+                  <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
+                    <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
+                    Paddle Shifters
+                  </div>
+                  <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
+                    <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
+                    Premium Lights
+                  </div>
+                  <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
+                    <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
+                    Turbocharger
+                  </div>
+                  <div className="col col-md-4"> {/*style="padding: 5px 0;"*/}
+                    <img src={image_ok} width="24" className={s.sk_details__icon_list_image}/>
+                    Parking Sensors
+                  </div>
+                </Skblock>
+                <br />
+
+                <Skblock header={'Car History'}>
+                  <div className="col col-md-4">  {/*style="padding: 5px 0;"*/}
+                    <img src={image_diploma_1} width="24" className={s.sk_details__icon_list_image}/>
+                    No Problems Found
+                  </div>
+                  <div className="col col-md-4">  {/*style="padding: 5px 0;"*/}
+                    <label>VIN code: </label> WVW7454WBVNVHD
+                  </div>
+                </Skblock>
+
+                <PetrolConsumption/>
+
+                <Performance />
+
+                <Skblock header={'Safety'}>
+                  <div className={s.sk_details__stars_outer_container}>
+                    <div className={s.sk_details__stars_inner_container}>
+                      <img className={s.sk_details__star} src={image_star_2x}/>
+                      <img className={s.sk_details__star} src={image_star_2x}/>
+                      <img className={s.sk_details__star} src={image_star_2x}/>
+                      <img className={s.sk_details__star} src={image_star_2x}/>
+                      <img className={s.sk_details__star} src={image_star_2x}/>
+
+                      <img className={s.sk_details__stars_euroncap} src={image_4_2x}/>
+                    </div>
+                  </div>
+                </Skblock>
+                <br />
+
+                <InspectorsReport />
+
+                <SkyndaCare />
+
+                <Reviews />
+              </div>
+              <div className="col col-md-5">
+                <Sticky>
+                  <Checkout />
+                </Sticky>
+              </div>
+            </div>
+          </StickyContainer>
+
+          <div className="row">
+            <Skblock header={'Other cars that you might like'}>...</Skblock>
+          </div>
+        </div>
       </div>
-
-
-    </div>
-  )
+    )
   }
 }
 
