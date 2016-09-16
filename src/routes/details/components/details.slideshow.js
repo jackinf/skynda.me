@@ -3,6 +3,8 @@
  */
 var React = require('react');
 var Carousel = require('nuka-carousel');
+// import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
+// import FlatButton from 'material-ui/FlatButton';
 
 // Images
 import image1 from './../../../public/images/cars/accord/accord.jpg';
@@ -24,6 +26,21 @@ const Slideshow = React.createClass({
     )
   }
 });
+
+
+
+// const Slideshow = () => (
+//   <Card>
+//     <CardHeader
+//       title="MAZDA TRALALA!"
+//       subtitle="BEST FUCKING MAZDA EVER!! "
+//       avatar="images/jsa-128.jpg"
+//     />
+//     <CardMedia overlay={<CardTitle title="Overlay title" subtitle="Overlay subtitle" />} className={s.test123}>
+//       <Slideshow1 />
+//     </CardMedia>
+//   </Card>
+// );
 
 {/*const Slideshow = () => (<div>Slideshow goes here...</div>);*/}
 

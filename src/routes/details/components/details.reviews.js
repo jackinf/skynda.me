@@ -6,6 +6,8 @@ import s from './../details.css';
 import image_star from './../../../public/images/standard/star.png';
 import image_unstar from './../../../public/images/standard/star-1.png';
 
+import RaisedButton from 'material-ui/RaisedButton';
+
 class Overview extends React.Component {
   render() {
     return (<Skblock header={'Reviews'}>
@@ -29,9 +31,7 @@ class Overview extends React.Component {
           Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
           industry's standard dummy text ever since the 1500s <br />
           <br/>
-          <button  className="btn btn-white btn-sm pull-right haha-button-01">Read {/* style="margin: -15px; border-radius: 5px 0 0 0;" */}
-            More
-          </button>
+          <RaisedButton label="Read More" />
         </div>
       </div>
     </Skblock>);

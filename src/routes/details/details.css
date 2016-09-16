@@ -81,7 +81,26 @@
   float: right;
 }
 
+.sk_details__checkout_container {
+  margin-top: 25px;
+  border: 2px solid #019bff;
+  border-radius: 5px;
+}
 .sk_details__skblock {
   margin: 20px 0;
   padding: 10px 10px;
+}
+
+.sk_details__checkout_tab {
+  background: #019bff !important;
+  color: whitesmoke !important;
+}
+
+.sk_details__checkout_tab_inner {
+  padding: 10px;
+}
+
+.sk_details__checkout_tab_action_button {
+  margin: 0 auto;
+  padding: 10px;
 }
