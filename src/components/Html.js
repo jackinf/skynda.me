@@ -15,6 +15,11 @@ function Html({ title, description, style, script, children }) {
         {style && <style id="css" dangerouslySetInnerHTML={{ __html: style }} />}
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha.4/css/bootstrap.min.css"/>
         {/*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>   */}
+        <style id="css1" dangerouslySetInnerHTML={{ __html: `
+        [type=button]{
+          -webkit-appearance: none !important;  /* Material-UI button fix*/
+        }
+        ` }}/>
       </head>
       <body>
         <div id="app" >

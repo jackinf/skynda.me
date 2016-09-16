@@ -13,6 +13,9 @@ import {List, ListItem} from 'material-ui/List';
 import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
+import ContentInbox from 'material-ui/svg-icons/content/inbox';
+import Avatar from 'material-ui/Avatar';
+import TextField from 'material-ui/TextField';
 
 class ListItemText extends React.Component {
  render() {
@@ -40,46 +43,19 @@ const tab1 = (<li className="tab-pane fade active in" id="htab1">
 </li>);
 const tab2 =(<li className="tab-pane fade active in" id="htab2">
   <div className="row">
-    <ul className="list-icons">
-      <li>
-        <div className="row">
-          <div className="col-md-6"><i className="icon-check pr-10"></i> Car Price</div>
-          <div className="col-md-6 text-align-right text-bold">
-            {/*{{carData.price}} €*/}
-          </div>
-        </div>
-      </li>
-      <li>
-        <div className="row">
-          <div className="col-md-6"><i className="icon-check pr-10"></i> Insurance by Salva</div>
-          <div className="col-md-6 text-align-right">0 €</div>
-        </div>
-      </li>
-      <li>
-        <div className="row">
-          <div className="col-md-6"><i className="icon-check pr-10"></i> Kasko by Salva</div>
-          <div className="col-md-6 text-align-right">0 €</div>
-        </div>
-      </li>
-      <li>
-        <div className="row">
-          <div className="col-md-6"><i className="icon-check pr-10"></i> Full Tank on Delivery</div>
-          <div className="col-md-6 text-align-right">0 €</div>
-        </div>
-      </li>
-      <li>
-        <div className="row">
-          <div className="col-md-6"><i className="icon-check pr-10"></i> Other</div>
-          <div className="col-md-6 text-align-right">0 €</div>
-        </div>
-      </li>
-      <li>
-        <div className="row">
-          <div className="col-md-6"><i className="icon-check pr-10"></i> Service</div>
-          <div className="col-md-6 text-align-right">0 €</div>
-        </div>
-      </li>
-    </ul>
+    <div className="col-md-12">
+
+      <List>
+        <Subheader>Leasing a car</Subheader>
+        <ListItem primaryText={<ListItemText text="Car price" price="5600 €"/>} />
+        <ListItem primaryText={<ListItemText text="Insurance by Salva" price="0  €"/>} />
+        <ListItem primaryText={<ListItemText text="Kasko by Salva" price="0 €"/>} />
+        <ListItem primaryText={<ListItemText text="Full Tank on Delivery" price="0 €"/>} />
+        <ListItem primaryText={<ListItemText text="Other" price="0 €"/>} />
+        <ListItem primaryText={<ListItemText text="Service" price="0 €"/>}  />
+      </List>
+    </div>
+
     <div className="col-md-12">
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere hic qui non placeat ad explicabo
         dignissimos amet iusto veniam!</p>
@@ -90,16 +66,61 @@ const tab2 =(<li className="tab-pane fade active in" id="htab2">
 </li>);
 
 
+class CheckoutDialogContent extends React.Component {
+  render() {
+    return (<div>
+      <div className="row">
+        <div className="col col-md-6">
+          <TextField floatingLabelText="First name" fullWidth={true}/>
+        </div>
+        <div className="col col-md-6">
+          <TextField floatingLabelText="Last name" fullWidth={true}/>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col col-md-6">
+          <TextField floatingLabelText="E-mail" fullWidth={true}/>
+        </div>
+        <div className="col col-md-6">
+          <TextField floatingLabelText="Phone Number" fullWidth={true}/>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col col-md-12">
+          <TextField floatingLabelText="ID Number" fullWidth={true}/>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col col-md-12">
+          <TextField floatingLabelText="Billing Address" fullWidth={true}/>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col col-md-12">
+          <TextField floatingLabelText="Shipping Address" fullWidth={true}/>
+        </div>
+      </div>
+      <div className="row">
+        <div className="col col-md-6">
+          <TextField floatingLabelText="Delivery Date" fullWidth={true}/>
+        </div>
+        <div className="col col-md-6">
+          <TextField floatingLabelText="Delivery Time" fullWidth={true}/>
+        </div>
+      </div>
+    </div>);
+  }
+}
+
 class Checkout extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = {leaseTab: false};
+    this.state = {tab: 1, open: false};
   }
 
-  changeCheckoutTab = () => {
-    let toggled = !this.state.leaseTab;
-    this.setState({leaseTab: toggled});
+  setTab = (e, tab) => {
+    this.setState({tab: tab});
   };
 
   handleOpen = () => {
@@ -128,20 +149,18 @@ class Checkout extends React.Component {
     return (<div id="scroller" className="checkout-container">
 
       <Dialog
-        title="Dialog With Actions"
+        title="One More Step"
         actions={actions}
         modal={false}
-        open={!!this.state.open}
+        open={this.state.open}
         onRequestClose={this.handleClose}
       >
-        The actions in this window were passed in as an array of React objects.
-
-
+        <CheckoutDialogContent />
       </Dialog>
 
       <ul className="nav nav-tabs" role="tablist">
         <li className="active col-md-6">
-          <a href="#" role="tab" aria-expanded="true" onClick={e => this.changeCheckoutTab(e)}>
+          <a href="#" role="tab" aria-expanded="true" onClick={e => this.setTab(e, 1)}>
               <span className="nav-tab-header">
                   Buy Now<br/>
                   <span className="nav-tab-header-numbers">
@@ -151,7 +170,7 @@ class Checkout extends React.Component {
           </a>
         </li>
         <li className="col-md-6">
-          <a href="#" role="tab" aria-expanded="false" onClick={e => this.changeCheckoutTab(e)}>
+          <a href="#" role="tab" aria-expanded="false" onClick={e => this.setTab(e, 2)}>
             <span className="nav-tab-header">
                 Lease<br/>
                 <span className="nav-tab-header-numbers">
@@ -163,10 +182,10 @@ class Checkout extends React.Component {
       </ul>
 
       <div className="tab-content">
-        {this.state.leaseTab ? tab2 : tab1}
+        {this.state.tab === 2 ? tab2 : tab1}
       </div>
 
-      {this.state.leaseTab
+      {this.state.tab === 2
         ? (<RaisedButton label="Lease" onTouchTap={this.handleOpen} />)
         : (<RaisedButton label="Checkout" onTouchTap={this.handleOpen} />)}
 
