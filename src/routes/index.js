@@ -9,7 +9,6 @@
 
 import React from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import injectTapEventPlugin from 'react-tap-event-plugin';
 import App from '../components/App';
 
 // Child routes
@@ -20,9 +19,16 @@ import content from './content';
 import notFound from './notFound';
 import carDetails from './details';
 
-injectTapEventPlugin();
 
-
+class Wrapper extends React.Component {
+  render() {
+    return (<MuiThemeProvider>
+      <div>
+        <App context={this.props.context}>{this.props.route.component}</App>
+      </div>
+    </MuiThemeProvider>);
+  }
+}
 
 export default {
 
@@ -60,7 +66,7 @@ export default {
        We need to wrap the entire application with MuiThemeProvider in order for all material-ui components to work.
        See https://www.npmjs.com/package/material-ui
        */
-      component: (<MuiThemeProvider><App context={context}>{route.component}</App></MuiThemeProvider>),
+      component: <Wrapper context={context} route={route} />,
     };
   },
 

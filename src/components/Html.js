@@ -1,6 +1,7 @@
 import React, { PropTypes } from 'react';
 import { analytics } from '../config';
 
+
 function Html({ title, description, style, script, children }) {
   return (
     <html className="no-js" lang="en">
@@ -16,7 +17,9 @@ function Html({ title, description, style, script, children }) {
         {/*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"/>   */}
       </head>
       <body>
-        <div id="app" dangerouslySetInnerHTML={{ __html: children }} />
+        <div id="app" >
+          <div dangerouslySetInnerHTML={{ __html: children }} />
+        </div>
         {script && <script src={script} />}
         {analytics.google.trackingId &&
           <script

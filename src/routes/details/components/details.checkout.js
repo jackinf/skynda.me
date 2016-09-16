@@ -14,18 +14,25 @@ import Subheader from 'material-ui/Subheader';
 import Divider from 'material-ui/Divider';
 import Checkbox from 'material-ui/Checkbox';
 
+class ListItemText extends React.Component {
+ render() {
+   return (<div>{this.props.text} <p className={s.sk_details__checkout_price}>{this.props.price}</p></div>);
+ }
+}
+
 const tab1 = (<li className="tab-pane fade active in" id="htab1">
   <div className="row">
     <div className="col-md-12">
 
       <List>
         <Subheader>Buying a car</Subheader>
-        <ListItem primaryText="Car Price"           secondaryText="5600 €" leftCheckbox={<Checkbox />} />
-        <ListItem primaryText="Insurance by Salva"  secondaryText="20  €" leftCheckbox={<Checkbox />} />
-        <ListItem primaryText="Kasko by Salva"      secondaryText="40 €" leftCheckbox={<Checkbox />} />
-        <ListItem primaryText="Full Tank on Delivery" secondaryText="70 €" leftCheckbox={<Checkbox />} />
-        <ListItem primaryText="Other"               secondaryText="18 €" leftCheckbox={<Checkbox />} />
-        <ListItem primaryText="Service"             secondaryText="109 €" leftCheckbox={<Checkbox />} />
+        <ListItem primaryText={<ListItemText text="Car price" price="5600 €"/>}  leftCheckbox={<Checkbox />}  />
+        <ListItem primaryText={<ListItemText text="Insurance by Salva" price="20  €"/>}  leftCheckbox={<Checkbox />}  />
+        <ListItem primaryText={<ListItemText text="Kasko by Salva" price="40 €"/>}  leftCheckbox={<Checkbox />}  />
+        <ListItem primaryText={<ListItemText text="Full Tank on Delivery" price="70 €"/>}  leftCheckbox={<Checkbox />}  />
+        <ListItem primaryText={<ListItemText text="Other" price="18 €"/>}  leftCheckbox={<Checkbox />}  />
+        <ListItem primaryText={<ListItemText text="Service" price="109 €"/>}  leftCheckbox={<Checkbox />}  />
+        {/*<ListItem primaryText="Service"             secondaryText="109 €"   leftCheckbox={<Checkbox />} />*/}
       </List>
 
     </div>
@@ -85,8 +92,8 @@ const tab2 =(<li className="tab-pane fade active in" id="htab2">
 
 class Checkout extends React.Component {
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {leaseTab: false};
   }
 
@@ -124,7 +131,7 @@ class Checkout extends React.Component {
         title="Dialog With Actions"
         actions={actions}
         modal={false}
-        open={this.state.open}
+        open={!!this.state.open}
         onRequestClose={this.handleClose}
       >
         The actions in this window were passed in as an array of React objects.

@@ -12,7 +12,8 @@ import emptyFunction from 'fbjs/lib/emptyFunction';
 import s from './App.css';
 import Header from '../Header';
 import Footer from '../Footer';
-
+import injectTapEventPlugin from 'react-tap-event-plugin';
+injectTapEventPlugin();
 class App extends Component {
 
   static propTypes = {

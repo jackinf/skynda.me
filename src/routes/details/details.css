@@ -75,3 +75,8 @@
   font-weight: bolder;
   color: whitesmoke
 }
+
+.sk_details__checkout_price {
+  font-size: 26px;
+  float: right;
+}
