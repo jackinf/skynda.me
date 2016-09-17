@@ -20,6 +20,13 @@
   padding-bottom: 0;
   position: relative;
 }
+
+.sk_hero h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
 .sk_hero__image{
   height: 100%;
   width: 100%;
@@ -85,4 +92,23 @@
 
 .info-image{
   overflow: hidden;
+}
+
+.read_more {
+  color: whitesmoke;
+  background: var(--color-primary);
+}
+
+.grid {
+  padding: 30px 0;
+}
+
+.primary-header {
+  font-family: inherit;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.text-center {
+  text-align: center;
 }

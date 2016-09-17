@@ -46,7 +46,7 @@ const colors = [
 
 class Keypoint extends React.Component {
   render() {
-    return (<div className={`${s.sk_keypoint} ${s.text_center}`}>
+    return (<div className={`${s["primary-header"]} ${s["text-center"]}`}>
       <img className={s.sk_keypoint__image} src={this.props.src} alt=""/>
       <h2 className={s.blue_header}>{this.props.title}</h2>
       <p>{this.props.content}</p>
@@ -62,13 +62,12 @@ function Home({news}) {
         <img className={s.sk_hero__image} src={heroImageUrl} alt="image"/>
         <div className={s.sk_hero__text}>
           <div className="container">
-            <div className="grid">
+            <div className={s.grid}>
               <div className="col-md-9">
                 <h2>Buying a pre-used car has never been so fun, easy and secure</h2>
               </div>
               <div className="col-md-3">
-                <RaisedButton label="Go to car details..." primary={true} href="details"/>
-                {/*<a className="btn btn-primary read_more_button" href="#" role="button">Read More</a> /!* styleName="margin-top:20px;"  *!/*/}
+                <RaisedButton label="Read more" href="details" backgroundColor="#019BFF" labelColor="whitesmoke"  />
               </div>
             </div>
           </div>
@@ -144,14 +143,14 @@ function Home({news}) {
         <div className="row">
           <div className="row">
             <div className="col-sx-12">
-              <h2 className="blue-header text-center">Recently Added</h2>
+              <h2 className={`${s["primary-header"]} ${s["text-center"]}`}>Recently Added</h2>
             </div>
+
+            <br />
 
             <div className="row">
               <div className="col-md-12">
-                <div className="row">
-                  <ImageGrid rows={cars}/>
-                </div>
+                <ImageGrid rows={cars}/>
               </div>
             </div>
           </div>

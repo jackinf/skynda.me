@@ -19,6 +19,11 @@ function Html({ title, description, style, script, children }) {
         [type=button]{
           -webkit-appearance: none !important;  /* Material-UI button fix*/
         }
+        body {
+            font-family: 'Open Sans', sans-serif;
+          font-size: 15px;
+          line-height: 1.50;
+        }
         ` }}/>
       </head>
       <body>

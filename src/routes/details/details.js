@@ -23,6 +23,21 @@ import SkyndaCare from './components/details.skynda-care';
 import Reviews from './components/details.reviews';
 import Checkout from './components/details.checkout';
 
+import ImageGrid from './../../components/ImageGrid/ImageGrid';
+
+// List of rows
+import image_testcar from '../../public/images/cars/accord/accord.jpg';
+
+const cars = [[
+  {src: image_testcar, href: '/details', title: 'one', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'two', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'three', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'four', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'five', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'six', description: 'awesome car'}
+]];
+
+
 import {StickyContainer, Sticky} from 'react-sticky';
 
 class CarDetails extends React.Component {
@@ -113,7 +128,9 @@ class CarDetails extends React.Component {
           </StickyContainer>
 
           <div className="row">
-            <Skblock header={'Other cars that you might like'}>...</Skblock>
+            <Skblock header={'Other cars that you might like'}>
+              <ImageGrid rows={cars}/>
+            </Skblock>
           </div>
         </div>
       </div>
