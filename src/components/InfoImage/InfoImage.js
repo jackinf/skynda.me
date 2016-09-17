@@ -8,17 +8,16 @@ import s from './InfoImage.css';
 
 class InfoImage extends React.Component {
   render() {
-    return (<div className="info-image">
+    return (<div className={s.info_image}>
       <a href={this.props.href}>
-        <img src={this.props.src} className={s["info-image__image"]} />
+        <img src={this.props.src} className={s.info_image__image} />
       </a>
 
-      <div className="info-image__info-panel-bg">
+      <div className={s.info_image__info_panel_bg}>
       </div>
 
-      <div className="info-image__info-panel">
-        {...this.props.children}
-        {/*<ng-transclude></ng-transclude>*/}
+      <div className={s.info_image__info_panel}>
+        {this.props.children}
       </div>
     </div>);
   }

@@ -18,7 +18,8 @@ import register from './register';
 import content from './content';
 import notFound from './notFound';
 import carDetails from './details';
-
+import advancedSearch from './advancedSearch';
+import simple from './simple';
 
 class Wrapper extends React.Component {
   render() {
@@ -40,6 +41,8 @@ export default {
     login,
     register,
     carDetails,
+    advancedSearch,
+    simple,
 
     // place new routes before...
     content,

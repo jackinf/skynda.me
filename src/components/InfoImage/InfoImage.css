@@ -1,10 +1,10 @@
-.info-image {
+.info_image {
   position: relative;
   margin-bottom: 15px;
 }
 
-.info-image__info-panel,
-.info-image__info-panel-bg {
+.info_image__info_panel,
+.info_image__info_panel_bg {
   border-bottom-left-radius: 4px;
   border-bottom-right-radius: 4px;
   position: absolute;
@@ -14,26 +14,28 @@
   transition: height 0.25s, opacity 0.25s;
 }
 
-.info-image:hover .info-image__info-panel,
-.info-image:hover .info-image__info-panel-bg {
+.info_image:hover .info_image__info_panel,
+.info_image:hover .info_image__info_panel_bg {
   height: 30%;
 }
 
-.info-image:hover .info-image__info-panel-bg {
+.info_image:hover .info_image__info_panel_bg {
   opacity: 0.6;
 }
 
-.info-image__info-panel-bg {
+.info_image__info_panel_bg {
   background-color: black;
   opacity: 0.3;
 }
 
-.info-image__info-panel {
+.info_image__info_panel {
   padding-left: 4px;
   padding-right: 4px;
   color: white;
 }
 
-.info-image__image {
+.info_image__image {
   margin: 0 auto;
+  max-width:100%;
+  max-height:100%;
 }

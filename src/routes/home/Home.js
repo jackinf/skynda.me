@@ -19,6 +19,19 @@ import image_ok from './../../public/images/standard/ok@2x.png';
 import image_clock from './../../public/images/standard/clock@2x.png';
 import image_happy from './../../public/images/standard/happy@2x.png';
 
+import ImageGrid from '../../components/ImageGrid/ImageGrid';
+import image_testcar from '../../public/images/cars/accord/accord.jpg';
+
+// List of rows
+const cars = [[
+  {src: image_testcar, href: '/details', title: 'one', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'two', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'three', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'four', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'five', description: 'awesome car'},
+  {src: image_testcar, href: '/details', title: 'six', description: 'awesome car'}
+]];
+
 // Replace with car marks
 const colors = [
   'Red',
@@ -137,7 +150,7 @@ function Home({news}) {
             <div className="row">
               <div className="col-md-12">
                 <div className="row">
-                  {/*<image-grid ng-if="cars.recent.length > 0" values="cars.recent"></image-grid>*/}
+                  <ImageGrid rows={cars}/>
                 </div>
               </div>
             </div>

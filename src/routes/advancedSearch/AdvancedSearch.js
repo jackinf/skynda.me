@@ -4,9 +4,18 @@
 
 import React from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
-import s from './Search.css';
+import s from './AdvancedSearch.css';
 
 class Search extends React.Component {
+  constructor() {
+    super();
+    this.search = this.search.bind(this);
+  }
+
+  search() {
+    console.log("search is not implemented");
+  }
+
   render() {
     return (<div>
         {/*<sk-navbar></sk-navbar>*/}
@@ -91,7 +100,7 @@ class Search extends React.Component {
                     ADVANCED FILTERS
                   </button>
 
-                  <button className="btn btn-info sk-btn--search" ng-click="$ctrl.search()">
+                  <button className="btn btn-info sk-btn--search" onClick={this.search}>
                     <span className="glyphicon glyphicon-search"></span>
                     Search
                   </button>
@@ -100,7 +109,7 @@ class Search extends React.Component {
             </div>
           </section>
 
-          <!-- SEARCH RESULTS -->
+          {/*<!-- SEARCH RESULTS -->*/}
           <label>
             {/*{{$ctrl.searchedCars.length}} {{$ctrl.searchedCars.length === 1 ? 'beauty' : 'beauties'}} found*/}
           </label>
