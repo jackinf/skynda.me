@@ -54,7 +54,7 @@ function Home({news}) {
                 <h2>Buying a pre-used car has never been so fun, easy and secure</h2>
               </div>
               <div className="col-md-3">
-                <RaisedButton label="Go to car details..." href="details"/>
+                <RaisedButton label="Go to car details..." primary={true} href="details"/>
                 {/*<a className="btn btn-primary read_more_button" href="#" role="button">Read More</a> /!* styleName="margin-top:20px;"  *!/*/}
               </div>
             </div>
