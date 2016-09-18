@@ -1,12 +1,15 @@
 import {observable, action} from 'mobx';
-import {host} from '../config';
+// import {host} from '../config';
+import fetch from 'node-fetch';
+
+const host = "http://skynda.me";
+
 
 class BaseStore {
   baseApi;
 
   constructor(api) {
     this.baseApi = host + api;
-    this.getAll();
   }
 
   @observable items = [];
@@ -15,7 +18,8 @@ class BaseStore {
 
   @action getAll() {
     this.isloading = true;
-    window.fetch(this.baseApi)
+    console.log(this.baseApi);
+    fetch(this.baseApi)
       .then(response => response.json())
       .then(data => {
         for(var item of data) {
@@ -27,7 +31,7 @@ class BaseStore {
 
   @action getSingle(id) {
     this.isLoading = true;
-    window.fetch(`${this.baseApi}/${id}`)
+    fetch(`${this.baseApi}/${id}`)
       .then(response => response.json())
       .then(item => {
         this.item = item;
@@ -41,7 +45,7 @@ class BaseStore {
       data.append(key, item[key]);
     }
 
-    return window.fetch(this.baseApi, {
+    return fetch(this.baseApi, {
       method: 'POST',
       body: data
     })
@@ -58,7 +62,7 @@ class BaseStore {
       data.append(key, item[key]);
     }
 
-    return window.fetch(`${this.baseApi}/${item.id}`, {
+    return fetch(`${this.baseApi}/${item.id}`, {
       method: 'PUT',
       body: data
     })
@@ -69,7 +73,7 @@ class BaseStore {
   }
 
   @action remove(id) {
-    return window.fetch(`${this.baseApi}/${id}`, {
+    return fetch(`${this.baseApi}/${id}`, {
       method: 'DELETE'
     }).then(() => {
       this.items = this.items.filter(item => item.id !== id);

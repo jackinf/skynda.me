@@ -49,13 +49,13 @@ class Header extends React.Component {
             <NavLink><img className={s["sk_logo"]} src={image_2} /></NavLink>
           </NavbarBrand>
           <Nav className="pull-xs-right" navbar>
-            <NavItem>
-              <NavLink href="#" className={`${s["sk_menu__sell"]}`}
-                       onClick={e => this.toggleModal(1, true)}>Sell Your Car</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="/search" className={s["sk_menu__buy"]}>Buy Your Car</NavLink>
-            </NavItem>
+            {/*<NavItem>*/}
+              {/*<NavLink href="#" className={`${s["sk_menu__sell"]}`}*/}
+                       {/*onClick={e => this.toggleModal(1, true)}>Sell Your Car</NavLink>*/}
+            {/*</NavItem>*/}
+            {/*<NavItem>*/}
+              {/*<NavLink href="/search" className={s["sk_menu__buy"]}>Buy Your Car</NavLink>*/}
+            {/*</NavItem>*/}
           </Nav>
         </Navbar>
 

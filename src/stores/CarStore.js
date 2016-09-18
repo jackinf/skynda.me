@@ -6,7 +6,7 @@ import BaseStore from './BaseStore';
 
 class CarStore extends BaseStore {
   constructor() {
-    super('/cars');
+    super('/api/car');
   }
 }
 

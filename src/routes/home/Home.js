@@ -13,7 +13,6 @@ import s from './Home.css';
 
 import {InputGroup, InputGroupButton, Input, Button} from 'reactstrap';
 
-import CarStore from '../../stores/carStore';
 import ImageGrid from '../../components/ImageGrid/ImageGrid';
 import image_testcar from '../../public/images/cars/accord/accord.jpg';
 
@@ -21,6 +20,10 @@ import Hero from './components/Home.hero';
 import Keypoints from './components/Home.keypoints';
 
 var Loading = require('react-loading');
+
+// import CarStore from '../../stores/carStore';
+// var store = new CarStore();
+// store.getAll();
 
 // List of rows
 const cars = {
