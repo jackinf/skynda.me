@@ -13,13 +13,14 @@ import s from './Home.css';
 
 import {InputGroup, InputGroupButton, Input, Button} from 'reactstrap';
 
+import CarStore from '../../stores/carStore';
 import ImageGrid from '../../components/ImageGrid/ImageGrid';
 import image_testcar from '../../public/images/cars/accord/accord.jpg';
 
 import Hero from './components/Home.hero';
 import Keypoints from './components/Home.keypoints';
 
-import CarStore from '../../stores/carStore';
+var Loading = require('react-loading');
 
 // List of rows
 const cars = {
@@ -33,6 +34,8 @@ const cars = {
     {src: image_testcar, href: '/details', title: 'six', description: 'awesome car'}
   ]]
 };
+
+const bars = <Loading type='bars' color='black' />;
 
 class Home extends React.Component {
 
@@ -73,6 +76,8 @@ class Home extends React.Component {
           <br />
           <br />
 
+
+
           {
             /**
              * SEARCH
@@ -112,7 +117,9 @@ class Home extends React.Component {
           }
 
           {this.state.isSearching
-            ? (<div className="row">Searching</div>) : cars.searchResults.length > 0
+            ? (<div className="row">
+                Loading... {bars}
+              </div>) : cars.searchResults.length > 0
             ? (<div className="row">
                 <div className="col-sx-12">
                   <h2 className={`${s["primary-header-2"]} ${s["text-center"]}`}>Found: {cars.searchResults[0].length}</h2>
