@@ -1,7 +1,7 @@
 import {observable, action} from 'mobx';
 import {host} from '../config';
 
-export default class BasicStore {
+export default class BaseStore {
   baseApi;
 
   constructor(api) {

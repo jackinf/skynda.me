@@ -2,7 +2,7 @@
  * Created by jevgenir on 18/09/2016.
  */
 
-import BaseStore from './baseStore';
+import BaseStore from './BaseStore';
 
 class CarStore extends BaseStore {
   constructor() {
