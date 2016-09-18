@@ -20,10 +20,10 @@ class Hero extends React.Component {
       <div className={s.sk_hero__text}>
         <div className="container">
           <div className={s.grid}>
-            <div className="col-md-9">
+            <div className="col-md-10">
               <h2>Buying a pre-used car has never been so fun, easy and secure</h2>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-2">
               <RaisedButton label="Read more" href="details" backgroundColor="#019BFF" labelColor="whitesmoke"  />
             </div>
           </div>

@@ -17,28 +17,61 @@
 }
 
 
-.navbar_default .navbar_nav > .sk_menu__sell >a,
-.navbar_default .navbar_nav > .sk_menu__buy > a{
-  margin_top: 8px;
-  font_size: 24px;
-}
-.navbar_default .navbar_nav > .sk_menu__sell >a:hover,
-.navbar_default .navbar_nav > .sk_menu__buy > a:hover{
+/*.navbar_default .navbar_nav > .sk_menu__sell >a,*/
+/*.navbar_default .navbar_nav > .sk_menu__buy > a{*/
+  /*margin_top: 8px;*/
+  /*font_size: 24px;*/
+/*}*/
+/*.navbar_default .navbar_nav > .sk_menu__sell >a:hover,*/
+/*.navbar_default .navbar_nav > .sk_menu__buy > a:hover{*/
+  /*color: #5A5B5C;*/
+/*}*/
+/*.navbar_default .navbar_nav > .sk_menu__sell >a{*/
+  /*color: #FBBB68;*/
+/*}*/
+
+/*.navbar_default .navbar_nav > .sk_menu__buy > a{*/
+  /*color: #019BFF;*/
+/*}*/
+
+.sk_menu__sell:hover,
+.sk_menu__buy:hover{
   color: #5A5B5C;
 }
-.navbar_default .navbar_nav > .sk_menu__sell >a{
+
+.sk_menu__buy,
+.sk_menu__sell {
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 12px 20px 12px 19px;
+  z-index: 102;
+  border: 1px solid transparent;
+  bottom: -1px;
+  -webkit-transition: none;
+  -moz-transition: none;
+  -o-transition: none;
+  -ms-transition: none;
+  transition: none;
+}
+
+.sk_menu__sell{
   color: #FBBB68;
+  margin-top: 8px;
+  font-size: 24px;
 }
 
-.navbar_default .navbar_nav > .sk_menu__buy > a{
+.sk_menu__buy{
   color: #019BFF;
+  margin-top: 8px;
+  font-size: 24px;
 }
 
-.sk_logo img{
+.sk_logo{
   height:60px;
-  margin_right: 20px;
+  margin-right: 20px;
 }
-.sk_logo img + img{
-  height: 48px;
-  padding_top: 10px;
-}
+
+/*.sk_logo img + img{*/
+  /*height: 48px;*/
+  /*padding_top: 10px;*/
+/*}*/
