@@ -50,6 +50,11 @@
   overflow: hidden;
 }
 
+.primary-button,
+.primary-button:hover,
+.primary-button:active,
+.primary-button:focus,
+.primary-button:visited,
 .read_more {
   color: whitesmoke;
   background: var(--color-primary);
@@ -60,5 +65,17 @@
   font-weight: 800;
   color: var(--color-primary);
 }
+
+.primary-header-2 {
+  font-family: inherit;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin: 20px 0 15px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
 
 

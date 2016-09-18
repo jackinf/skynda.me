@@ -10,7 +10,6 @@
 import React, { PropTypes } from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Contact.css';
-import {Button} from 'react-bootstrap';
 
 function Contact({ title }) {
   return (
@@ -18,7 +17,6 @@ function Contact({ title }) {
       <div className={s.container}>
         <h1>{title} asdf</h1>
         <p>
-          <Button bsStyle="primary">Primary</Button>
         </p>
       </div>
     </div>

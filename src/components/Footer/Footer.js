@@ -13,6 +13,12 @@ import s from './Footer.css';
 import Link from '../Link';
 
 function Footer() {
+
+  // {/*<footer>*/}
+  // {/*<p className="text-center">Skynda AS Valge 16, Tallinn 19095 Estonia <a href="mailto:hello@skynda.me">hello@skynda.me</a></p>*/}
+  // {/*<div className="fb-like" data-href="https://www.facebook.com/Skynda-1197076750314307/?fref=ts" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>*/}
+  // {/*</footer>*/}
+
   return (
     <div className={s.root}>
       <div className={s.container}>
