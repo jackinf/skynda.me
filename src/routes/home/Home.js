@@ -10,17 +10,17 @@
 import React, {PropTypes} from 'react';
 import withStyles from 'isomorphic-style-loader/lib/withStyles';
 import s from './Home.css';
-import heroImageUrl from './../../public/images/standard/hero-01-2.jpg';
 
 import RaisedButton from 'material-ui/RaisedButton';
 import AutoComplete from 'material-ui/AutoComplete';
 
-import image_ok from './../../public/images/standard/ok@2x.png';
-import image_clock from './../../public/images/standard/clock@2x.png';
-import image_happy from './../../public/images/standard/happy@2x.png';
+
 
 import ImageGrid from '../../components/ImageGrid/ImageGrid';
 import image_testcar from '../../public/images/cars/accord/accord.jpg';
+
+import Hero from './components/Home.hero';
+import Keypoints from './components/Home.keypoints';
 
 // List of rows
 const cars = [[
@@ -44,63 +44,18 @@ const colors = [
   'White',
 ];
 
-class Keypoint extends React.Component {
-  render() {
-    return (<div className={`${s["primary-header"]} ${s["text-center"]}`}>
-      <img className={s.sk_keypoint__image} src={this.props.src} alt=""/>
-      <h2 className={s.blue_header}>{this.props.title}</h2>
-      <p>{this.props.content}</p>
-    </div>);
-  }
-}
+
 
 function Home({news}) {
   return (
     <div>
-      {/* Main jumbotron for a primary marketing message or call to action */}
-      <div className={s.sk_hero}>
-        <img className={s.sk_hero__image} src={heroImageUrl} alt="image"/>
-        <div className={s.sk_hero__text}>
-          <div className="container">
-            <div className={s.grid}>
-              <div className="col-md-9">
-                <h2>Buying a pre-used car has never been so fun, easy and secure</h2>
-              </div>
-              <div className="col-md-3">
-                <RaisedButton label="Read more" href="details" backgroundColor="#019BFF" labelColor="whitesmoke"  />
-              </div>
-            </div>
-          </div>
-        </div>
 
-      </div>
-
+      <Hero />
       <br />
 
       <div className="container">
-        <div className="row">
-          <div className="col-md-4">
-            <Keypoint
-              title="Certified Inspections"
-              content="All our cars have been certified by our inspectors. Every car comes with a detailed report."
-              src={image_ok}>
-            </Keypoint>
-          </div>
-          <div className="col-md-4">
-            <Keypoint
-              title="Fast Delivery"
-              content="We deliver your car in 3 days to which every location you choose."
-              src={image_clock}>
-            </Keypoint>
-          </div>
-          <div className="col-md-4">
-            <Keypoint
-              title="7 Day Returns"
-              content="If you do not find the car suitable you can return in 7 days, no questions asked."
-              src={image_happy}>
-            </Keypoint>
-          </div>
-        </div>
+
+        <Keypoints />
 
         <div className="row">
           <div className="col-sx-12">

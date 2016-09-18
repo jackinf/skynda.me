@@ -1,0 +1,18 @@
+@import '../../../components/variables.css';
+
+.keypoint-header {
+  font-family: inherit;
+  font-weight: 400;
+  color: var(--color-primary);
+  margin: 20px 0 15px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.sk_keypoint__image{
+  margin: 0 auto;
+  max-width: 128px;
+  height: auto;
+}

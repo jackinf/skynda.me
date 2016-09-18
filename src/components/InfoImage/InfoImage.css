@@ -1,6 +1,7 @@
 .info_image {
   position: relative;
   margin-bottom: 15px;
+  overflow: hidden;
 }
 
 .info_image__info_panel,
